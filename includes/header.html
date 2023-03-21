@@ -1,0 +1,71 @@
+<header>
+    <div class="header_inner">
+        <div class="logo_area">
+            <h1 class="logo">
+                <a href="/" class="logo_img"></a>
+            </h1>
+        </div>
+        <div class="gnb_area">
+            <ol>
+                <li class="gnb_list gnb_list1">
+                    <a href="../sub/sub1.html">About us</a>
+                </li>
+                <li class="gnb_list gnb_list2">
+                    <span>서비스 소개</span>
+                    <ul class="depth_list">
+                        <li>
+                            <a href="../sub/sub2_1.html">구독형 서비스</a>
+                        </li>
+                        <li>
+                            <a href="../sub/sub2_2.html">스토어형 서비스</a>
+                        </li>
+                        <li>
+                            <a href="../sub/sub2_3.html">물류 및 관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_list gnb_list3">
+                    <a href="../sub/sub3_1.html">도입 사례</a>
+                </li>
+                <li class="gnb_list gnb_list4">
+                    <a href="../sub/sub4.html">자주 묻는 질문</a>
+                </li>
+            </ol>
+        </div>
+        <div class="service_area">
+            <a href="/" class="btn">서비스 문의</a>
+        </div>
+        <div class="mobile_menu_btn mobile">
+            <button type="button" class="menu_btn"></button>
+        </div>
+    </div>
+</header>
+<div class="dim"></div>
+
+<script>
+    $('.gnb_list2').on('mouseenter', function(){
+        $(this).find('.depth_list').addClass('active');
+    });
+    $('.gnb_list2').on('mouseleave', function(){
+        $(this).find('.depth_list').removeClass('active');
+    });
+    $('.menu_btn').on('click', function(){
+        let gnb_route = $(this).closest('.header_inner').find('.gnb_area')
+        let has_open = gnb_route.hasClass('open');
+        if(has_open == false){
+            gnb_route.addClass('open');
+            $('#header_area').addClass('mainOn')
+            $('.dim').addClass('on');
+        }else{
+            gnb_route.removeClass('open');
+            $('#header_area').removeClass('mainOn')
+            $('.dim').removeClass('on');
+            
+        }
+    });
+    $(window).resize(function(){
+        $('.gnb_area').removeClass('open');
+        $('.dim').removeClass('on');
+    });
+
+</script>
