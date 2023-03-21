@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('#header_area').load('../includes/header.html')
-    $('#footer_area').load('../includes/footer.html')
+    // $('#header_area').load('../includes/header.html')
+    // $('#footer_area').load('../includes/footer.html')
 
     $('.selected').click(function(){
         let sel_has = $(this).parents('.select_wrap').hasClass('active');
