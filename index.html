@@ -14,7 +14,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#header_area').load('./includes/header_idx.html')
+            $('#footer_area').load('./includes/footer_idx.html')
+        })
+    </script>
 </head>
 <body>
     <div class="channelTalk_btn">
