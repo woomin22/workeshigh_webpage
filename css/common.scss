@@ -83,7 +83,7 @@ header{
             font-size: 16px;
         }
         
-        ≈
+        
     }
 }
 
@@ -328,6 +328,7 @@ footer{
     }
 
 }
+
 .dim{
     position: fixed;
     top: 0;
@@ -628,6 +629,14 @@ footer{
                 width: 82px;
                 height: 30px;
                 font-size: 12px;
+            }
+
+            .mobile_menu_btn{
+                button{
+                    width: 30px;
+                    height: 30px;
+                    background: url("../images/icon/icon-menu-bl.svg") no-repeat center/contain;
+                }
             }
         }
     }

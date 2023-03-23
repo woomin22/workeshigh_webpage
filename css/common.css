@@ -77,11 +77,6 @@ header .header_inner .service_area .btn {
   height: 44px;
   font-size: 16px;
 }
-header .header_inner .mobile_menu_btn button {
-  width: 30px;
-  height: 30px;
-  background: url("../images/icon/icon-menu-bl.svg") no-repeat center/contain;
-}
 
 footer {
   width: 100%;
@@ -583,6 +578,11 @@ footer .mobile .footer_bottom .contact_area ul li:first-child {
     width: 82px;
     height: 30px;
     font-size: 12px;
+  }
+  header .header_inner .mobile_menu_btn button {
+    width: 30px;
+    height: 30px;
+    background: url("../images/icon/icon-menu-bl.svg") no-repeat center/contain;
   }
   .section_inner h3.cont_title {
     font-size: 24px;

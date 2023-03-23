@@ -27,6 +27,22 @@
             <div class="icon_box"></div>
         </div>
     </div>
+    <div id="section_pagenation">
+        <ol>
+            <li>
+                <div class="section_pagenation_dot active"></div>
+            </li>
+            <li>
+                <div class="section_pagenation_dot"></div>
+            </li>
+            <li>
+                <div class="section_pagenation_dot"></div>
+            </li>
+            <li>
+                <div class="section_pagenation_dot"></div>
+            </li>
+        </ol>
+    </div>
     <div class="wrap">
         <div id="header_area">
             
@@ -34,10 +50,11 @@
         <script>
             $(document).ready(function() {
                 let currST = $(document).scrollTop();
-                let sectST = $('.sect2').offset().top;
-                if(currST >= 0 && currST <= sectST){
+                let sect2_scrollTop = $('.sect2').offset().top;
+                if(currST >= 0 && currST <= sect2_scrollTop){
                     setTimeout(function(){
                         $('#header_area').addClass('on');
+                        $('#section_pagenation').addClass('on');
                     },1500);
                 }
             });
@@ -47,10 +64,31 @@
                 let sectST = $('.sect2').offset().top;
                 if(winST <= sectST - 100){
                     $('#header_area').addClass('on');
+                    $('#section_pagenation').addClass('on');
                 }else{
                     $('#header_area').removeClass('on');
+                    $('#section_pagenation').removeClass('on');
                 }
-            })
+
+                $('section').each(function(i){
+                    let sectcion_scrollTop = $(this).offset().top;
+                    if(winST >= sectcion_scrollTop){
+
+                        $('.section_pagenation_dot').removeClass('active')
+                        $('#section_pagenation li').eq(i).find('.section_pagenation_dot').addClass('active')
+                    }
+                });
+            });
+
+            $('#section_pagenation li').on('click', function(){
+                let pagenation_idx = $(this).index();
+                let section_position = $('section').eq(pagenation_idx).offset().top;
+
+                $('.section_pagenation_dot').removeClass('active')
+                $(this).find('.section_pagenation_dot').addClass('active')
+                $('html').stop().animate({'scrollTop': section_position}, 300)
+            });
+
         </script>
 
         <main id="main">
