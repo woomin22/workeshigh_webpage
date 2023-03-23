@@ -27,7 +27,7 @@
             <div class="icon_box"></div>
         </div>
     </div>
-    <div id="section_pagenation">
+    <div id="section_pagenation pc">
         <ol>
             <li>
                 <div class="section_pagenation_dot active"></div>
@@ -389,10 +389,10 @@
                 <script>
                     var swiper1 = new Swiper(".sect2_slide", {
                       direction: "vertical",
+                      touchRatio: 0,
                     });
 
                     $('.sect2 .tab_list li').click(function(){
-                        
                         // ---------- tab list
                         $(this).closest('.tab_list').find('li').removeClass('active');
                         $(this).addClass('active');
@@ -403,12 +403,7 @@
                         }else{
                             $('.sect2').removeClass('height_change');
                             swiper1.slideTo(idx, 700);
-                        }
-                        
-                        
-
-                        
-
+                        }                      
                     })
 
                     var swiper = new Swiper(".sect2_cont_slide1", {
@@ -774,6 +769,7 @@
                 <script>
                     var swiper2 = new Swiper(".sect3_slide", {
                       direction: "vertical",
+                      touchRatio: 0,
                     });
 
                     $('.sect3 .tab_list li').click(function(){

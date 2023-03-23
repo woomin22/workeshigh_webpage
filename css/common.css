@@ -595,6 +595,10 @@ footer .mobile .footer_bottom .contact_area ul li:first-child {
     font-size: 16px;
     line-height: 35px;
   }
+  .channelTalk_btn {
+    right: 20px;
+    bottom: 20px;
+  }
   .aside_cont {
     width: 88.889%;
     padding: 0;
