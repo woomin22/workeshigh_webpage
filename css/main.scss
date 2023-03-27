@@ -144,9 +144,6 @@
                                 border-radius: 30px;
                                 overflow: hidden;
                             }
-                            &:nth-child(4) .img_box img{
-                                height: 155%;
-                            }
 
                             .txt_box{
                                 padding: 32px 10px 10px;
@@ -199,7 +196,7 @@
                                 border-radius: 30px;
                                 overflow: hidden;
                                 img{
-                                    width: 176px;
+                                    width: 220px;
                                 }
                             }
                             .txt_box{
@@ -347,6 +344,10 @@
                                 justify-content: center;
                                 width: 50%;
                                 overflow: hidden;
+                                background: #fff;
+                                img{
+                                    max-width: 380px;
+                                }
                             }
                             .txt_box{
                                 position: relative;
@@ -439,8 +440,6 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: auto;
-                height: 100%;
             }
 
             .slide_desc{
@@ -659,7 +658,10 @@
                         padding: 20px 0 44px;
                         .swiper-slide{
                             width: 77.778% !important;
-                            
+                            .img_box img{
+                                width: auto;
+                                height: 120%;
+                            }
                         }
                     }
                 }
@@ -675,10 +677,6 @@
                                     height: 180px;
                                     border-radius: 20px;
                                     overflow: hidden;
-                                    img{
-                                        width: 100%;
-                                        height: auto;
-                                    }
                                 }
                                 .txt_box{
                                     width: 97.333%;
@@ -715,12 +713,7 @@
                                 }
                                 .img_box{
                                     height: 221px;
-                                    border-radius: 20px;
-                                    img{
-                                        width: 100%;
-                                        height: auto;
-                                    }
-                                    
+                                    border-radius: 20px;                              
                                 }
                                 
                                 .txt_box{
@@ -752,6 +745,9 @@
                                 .img_box{
                                     height: 105px;
                                     border-radius: 20px;
+                                    img{
+                                        width: 80px;
+                                    }
                                     
                                 }
                                 .txt_box{
@@ -792,6 +788,10 @@
                         .swiper-slide{
                             width: 77.778% !important;
                             height: 320px;
+                            .img_box img{
+                                width: auto;
+                                height: 120%;
+                            }
                             .slide_desc b{
                                 display: inline;
                             }
@@ -892,8 +892,7 @@
                                     height: 220px;
                                     border-radius: 20px;
                                     img{
-                                        width: 100%;
-                                        height: auto;
+                                        width: 180px;
                                     }
                                 }
                                 .txt_box{

@@ -16,4 +16,55 @@ $(document).ready(function() {
         $(this).closest('.select_wrap').find('.selected_value').text(option_val);
         $(this).closest('.select_wrap').toggleClass('active');
     });
+    $('.radio_list').click(function(){
+        let checkde_radio2 = $(this).find('input:radio').is(':checked');
+        if(checkde_radio2 !== true){
+            $(this).closest('.radio_list_wrap').find('.radio_list').removeClass('checked');
+            $(this).addClass('checked');
+            $(this).closest('.radio_list_wrap').find('.radio_box_wrap').removeClass('checked');
+            $(this).find('.radio_box_wrap').addClass('checked');
+            $(this).closest('.radio_list_wrap').find('input:radio').attr('checked', false);
+            $(this).find('input:radio').attr('checked', true)
+        };
+    });
+    $('ol .radio_box_wrap').click(function(){
+        let checkde_radio1 = $(this).find('input:radio').is(':checked');
+        if(checkde_radio1 !== true){
+            $(this).parents().find('.radio_box_wrap').removeClass('checked');
+            $(this).addClass('checked');
+            $(this).parents().find('input:radio').attr('checked', false);
+            $(this).find('input:radio').attr('checked', true)
+        };
+    });
+    $('.privacy_policy_area .check_box_wrap').click(function(){
+        let checkde_checkbox1 = $(this).find('input:checkbox').is(':checked');
+        if(checkde_checkbox1 !== false){
+            $(this).closest('.privacy_policy_area').addClass('open');
+        }else{
+            $(this).closest('.privacy_policy_area').removeClass('open')
+        }
+    });
+    $('.privacy_policy_area .agreement_btn').click(function(){
+        let has_open = $(this).closest('.privacy_policy_area').hasClass('open')
+        if(has_open !== true){
+            $(this).closest('.privacy_policy_area').addClass('open');
+        }else{
+            $(this).closest('.privacy_policy_area').removeClass('open')
+        }
+    });
+
+    $('.inquiry_case_list li').click(function(){
+        $(this).closest('.inquiry_case_list').find('li').removeClass('on');
+        $(this).addClass('on');
+    });
+
+    $('.inquiry_btn_wrap li').click(function(){
+        $(this).closest('.inquiry_btn_wrap').find('li').removeClass('checked');
+        $(this).addClass('checked');
+    });
+
+    $('.close_btn').click(function(){
+        $('.popup').removeClass('on');
+        $('.popup_dim').removeClass('on');
+    });
 });
