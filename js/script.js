@@ -58,13 +58,29 @@ $(document).ready(function() {
         $(this).addClass('on');
     });
 
-    $('.inquiry_btn_wrap li').click(function(){
+    $('.inquiry_btn_wrap.single_choice li').click(function(){
         $(this).closest('.inquiry_btn_wrap').find('li').removeClass('checked');
         $(this).addClass('checked');
+    });
+    $('.inquiry_btn_wrap.multiple_choice li').click(function(){
+        $(this).toggleClass('checked');
     });
 
     $('.close_btn').click(function(){
         $('.popup').removeClass('on');
         $('.popup_dim').removeClass('on');
+    });
+
+    $('#service_request_btn2').on('click', function(){
+        $('#popup_area').load('../sub/sub5_2.html');
+    });
+    $('.product_info_btn1').on('click', function(){
+        $('#popup_area').load('../sub/sub5_3_1.html');
+    });
+    $('.product_info_btn2').on('click', function(){
+        $('#popup_area').load('../sub/sub5_3_2.html');
+    });
+    $('.product_info_btn3').on('click', function(){
+        $('#popup_area').load('../sub/sub5_3_3.html');
     });
 });

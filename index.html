@@ -16,9 +16,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#header_area').load('./includes/header_idx.html')
-            $('#footer_area').load('./includes/footer_idx.html')
-        })
+            $('#header_area').load('./includes/header_idx.html');
+            $('#footer_area').load('./includes/footer_idx.html');
+            $('#service_request_btn2_2').on('click', function(){
+                $('#popup_area').load('./sub/sub5_2.html');
+            });
+        });
     </script>
 </head>
 <body>
@@ -915,7 +918,7 @@
                                         <p>
                                             더 궁금한 게 있으면 저희에게 문의해 주세요!
                                         </p>
-                                        <a href="/" class="btn">문의하기</a>
+                                        <a href="#none" class="btn" id="service_request_btn2_2">문의하기</a>
                                     </div>
                                 </div>
                             </div>
@@ -926,5 +929,7 @@
         </main>
         <div id="footer_area"></div>
     </div>
+
+    <div id="popup_area"></div>
 </body>
 </html>

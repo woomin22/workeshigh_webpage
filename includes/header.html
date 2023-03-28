@@ -33,7 +33,7 @@
             </ol>
         </div>
         <div class="service_area">
-            <a href="/" class="btn">서비스 문의</a>
+            <span class="btn" id="service_request_btn">서비스 문의</span>
         </div>
         <div class="mobile_menu_btn mobile">
             <button type="button" class="menu_btn"></button>
@@ -67,5 +67,9 @@
         $('.gnb_area').removeClass('open');
         $('.dim').removeClass('on');
     });
+
+    $('#service_request_btn').click(function(){
+        $('#popup_area').load('../sub/sub5_1.html');
+    })
 
 </script>

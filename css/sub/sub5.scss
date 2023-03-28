@@ -784,6 +784,9 @@
             }
             .inquiry_question{
                 margin-top: 20px;
+                .input_wrap{
+                    max-width: initial;
+                }
             }
 
         }
@@ -823,13 +826,15 @@
                 }
             }
         }
-
         .service_inquiry_content3{
             ul.inquiry_btn_wrap li.inquiry_btn2{
                 width: 18.864%;
             }
             .inquiry_question{
                 margin-top: 20px;
+                .input_wrap{
+                    max-width: initial;
+                }
             }
 
         }
@@ -1338,10 +1343,12 @@
                             bottom: -21px;
                             font-size: 12px;
                             line-height: 17px;
+                            white-space: nowrap;
                         }
                     }
                     .input_textButton_wrap{
                         .btn{
+                            min-width: 70px;
                             margin-left: 8px;
                             padding: 0 12px;
                             font-size: 13px;

@@ -8,7 +8,6 @@
     <title>워커스하이</title>
 
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/popup.css">
     <link rel="stylesheet" href="../css/sub/sub5.css">
@@ -52,7 +51,7 @@
                             </li>
                         </ol>
                         <h5><span class="inquiry_essential_item">서비스가 필요한 공간을 선택해 주세요!</span></h5>
-                        <ul class="inquiry_btn_wrap">
+                        <ul class="inquiry_btn_wrap single_choice">
                             <li class="inquiry_btn1 checked">
                                 <span>오피스</span>
                             </li>
@@ -87,7 +86,7 @@
                 <div class="service_inquiry_content service_inquiry_content1">
                     <div class="popup_content_desc">
                         <h5 class="count_title"><span>1</span>필요하신 상품은 무엇인가요? <i>(복수 선택 가능)</i></h5>
-                        <ul class="inquiry_btn_wrap">
+                        <ul class="inquiry_btn_wrap multiple_choice ">
                             <li class="inquiry_btn2 checked">
                                 <div class="img_box">
                                     <img src="../images/../images/inquiry/inquiry_img7.svg" alt="상온 간식">
@@ -129,7 +128,7 @@
                             <h5>기타</h5>
                             <div class="input_wrap">
                                 <input type="text" placeholder="선택지에 없으시면 여기에 적어주세요!">
-                                <span class="icon_btn"></span>
+                                <span class="icon_btn delete_btn"></span>
                             </div>
                         </div>
                     </div>
@@ -149,17 +148,16 @@
                         <div class="inquiry_question inquiry_question2">
                             <div>
                                 <p>· 주요 연령대는요?</p>
-                                <h6 class="progress_value_area">연령대 <i><span id="range_value1">20</span>~<span id="range_value2">40</span>대</i></h6>
+                                <h6 class="progress_value_area">연령대 <i><span id="range_value1">20~</span><span id="range_value2">40</span>대</i></h6>
                                 <div class="check_box_wrap">
                                     <input type="checkbox" id="check2">
                                     <label for="check2">그때그때 달라요!</label>
                                 </div>
                             </div>
                             <div class="input_range_area input_range_area1">
-                                <div class="range_info"></div>
                                 <div class="range_box_wrap range_box_wrap1">
-                                    <input type="range" name="range1" id="range_bar1" min="1" max="6" step="1" value="2">
-                                    <input type="range" name="range1" id="range_bar2" min="1" max="6" step="1" value="4">
+                                    <input type="range" name="range1" id="range_bar1" min="0" max="5" step="1" value="1">
+                                    <input type="range" name="range1" id="range_bar2" min="0" max="5" step="1" value="3">
                                     <div class="range_full_background">
                                         <div class="range_value_background"></div>
                                         <ul class="range_dot_wrap">
@@ -173,13 +171,34 @@
                                     </div>
                                 </div>
                             </div>
+                            <script>
+                                $('#range_bar1, #range_bar2').on('change input', function(){
+                                    let bar1CurrVal = $('#range_bar1').val()
+                                    let bar2CurrVal = $('#range_bar2').val()
+                                    let minVal = Math.min(bar1CurrVal, bar2CurrVal)
+                                    let maxVal = Math.max(bar1CurrVal, bar2CurrVal)
+                                    let calcVal = maxVal - minVal
+                                    if(calcVal !== 0){
+                                        $('#range_value1').text( minVal + 1 + "0~");
+                                        $('#range_value2').text( maxVal + 1 + "0");
+                                    }else{
+                                        $('#range_value1').text("");
+                                        $('#range_value2').text( maxVal + 1 + "0");
+
+                                    }
+
+                                    $('.range_box_wrap1 .range_value_background').css({'left': 20*minVal + '%'});
+                                    $('.range_box_wrap1 .range_value_background').css({'width': 20*calcVal + '%'});
+                                    
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
                 <div class="service_inquiry_content service_inquiry_content3">
                     <div class="popup_content_desc">
                         <h5 class="count_title"><span>3</span>공간에서 추구하는 식문화, 또는 라이프스타일이 있으신가요?</h5>
-                        <ul class="inquiry_btn_wrap">
+                        <ul class="inquiry_btn_wrap single_choice">
                             <li class="inquiry_btn2 checked">
                                 <div class="img_box">
                                     <img src="../images/../images/inquiry/inquiry_img13.svg" alt="맛있는 게 최고!">
@@ -216,7 +235,7 @@
                             <h5>기타</h5>
                             <div class="input_wrap">
                                 <input type="text" placeholder="선택지에 없으시면 여기에 적어주세요!">
-                                <span class="icon_btn"></span>
+                                <span class="icon_btn delete_btn"></span>
                             </div>
                         </div>
                     </div>
@@ -740,7 +759,7 @@
                 <div class="service_inquiry_content service_inquiry_content1">
                     <div class="popup_content_desc">
                         <h5 class="count_title"><span>1</span>스토어에 판매하고 싶은 상품은 무엇인가요? <i>(복수 선택 가능)</i></h5>
-                        <ul class="inquiry_btn_wrap">
+                        <ul class="inquiry_btn_wrap multiple_choice ">
                             <li class="inquiry_btn2 checked">
                                 <div class="img_box">
                                     <img src="../images/../images/inquiry/inquiry_img7.svg" alt="상온 간식">
@@ -782,7 +801,7 @@
                             <h5>기타</h5>
                             <div class="input_wrap">
                                 <input type="text" placeholder="선택지에 없으시면 여기에 적어주세요!">
-                                <span class="icon_btn"></span>
+                                <span class="icon_btn delete_btn"></span>
                             </div>
                         </div>
                     </div>
@@ -804,7 +823,7 @@
                 <div class="service_inquiry_content service_inquiry_content3">
                     <div class="popup_content_desc">
                         <h5 class="count_title"><span>3</span>스토어에 잠금장치가 필요하신가요?</h5>
-                        <ul class="inquiry_btn_wrap">
+                        <ul class="inquiry_btn_wrap single_choice">
                             <li class="inquiry_btn1 checked">
                                 <span>필요해요</span>
                             </li>
@@ -1051,43 +1070,54 @@
 
     <script>
         $('#service_inquiry_main2 .inquiry_case_list li').on('click', function(){
-            $('#service_inquiry_main2 .inquiry_case_list li').removeClass('on')
-            $(this).addClass('on')
-            $('#service_inquiry_main2 .next_btn').attr('disabled', false)
-        })
+            $('#service_inquiry_main2 .inquiry_case_list li').removeClass('on');
+            $(this).addClass('on');
+            $('#service_inquiry_main2 .next_btn').attr('disabled', false);
+        });
         $('#service_inquiry_main2 .next_btn').on('click', function(){
             let firstBtn_has = $('#inquiry_case_btn4').hasClass('on');
             let lastBtn_has = $('#inquiry_case_btn5').hasClass('on');
             if(firstBtn_has == true){
-                $('.inquiry_popup').removeClass('on')
-                $('#service_inquiry2_1').addClass('on')
+                $('.inquiry_popup').removeClass('on');
+                $('#service_inquiry2_1').addClass('on');
             }else if(lastBtn_has == true){
-                $('.inquiry_popup').removeClass('on')
-                $('#service_inquiry4_1').addClass('on')
+                $('.inquiry_popup').removeClass('on');
+                $('#service_inquiry4_1').addClass('on');
             }
-        })
+        });
 
         $('#service_inquiry4_1 .prev_btn').on('click', function(){
-            $('.inquiry_popup').removeClass('on')
-            $('#service_inquiry_main2').addClass('on')
+            $('.inquiry_popup').removeClass('on');
+            $('#service_inquiry_main2').addClass('on');
         })
         $('#service_inquiry4_1').prevUntil('#service_inquiry_main2').find('.prev_btn').on('click', function(){
-            $('.inquiry_popup').removeClass('on')
-            $(this).closest('.inquiry_popup').prev().addClass('on')
+            $('.inquiry_popup').removeClass('on');
+            $(this).closest('.inquiry_popup').prev().addClass('on');
         })
         $('.popup_dim').prevUntil('#service_inquiry4_1').find('.prev_btn').on('click', function(){
-            $('.inquiry_popup').removeClass('on')
-            $(this).closest('.inquiry_popup').prev().addClass('on')
+            $('.inquiry_popup').removeClass('on');
+            $(this).closest('.inquiry_popup').prev().addClass('on');
         })
         
         $('#service_inquiry_main2').nextUntil('#service_inquiry2_4').find('.next_btn').on('click', function(){
-            $('.inquiry_popup').removeClass('on')
-            $(this).closest('.inquiry_popup').next().addClass('on')
-        })
+            $('.inquiry_popup').removeClass('on');
+            $(this).closest('.inquiry_popup').next().addClass('on');
+        });
         $('#service_inquiry2_4').nextUntil('#service_inquiry4_2_2').find('.next_btn').on('click', function(){
-            $('.inquiry_popup').removeClass('on')
-            $(this).closest('.inquiry_popup').next().addClass('on')
-        })
+            $('.inquiry_popup').removeClass('on');
+            $(this).closest('.inquiry_popup').next().addClass('on');
+        });
+
+        // text_box
+        $('.input_wrap input').on('focus', function(){
+            $(this).closest('.input_wrap').find('.delete_btn').addClass('on');
+        });
+        $('.input_wrap input').on('blur', function(){
+            $(this).closest('.input_wrap').find('.delete_btn').removeClass('on');            
+        });
+        $('.input_wrap .delete_btn').on('mousedown', function(){
+            $(this).closest('.input_wrap').find('input').val('');
+        });
     </script>
 </body>
 </html>

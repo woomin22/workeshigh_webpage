@@ -8,7 +8,6 @@
     <title>워커스하이</title>
 
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/popup.css">
     <link rel="stylesheet" href="../css/sub/sub5.css">
@@ -77,7 +76,7 @@
                 <div class="service_inquiry_content service_inquiry_content1">
                     <div class="popup_content_desc">
                         <h5 class="inquiry_essential_item">서비스가 필요한 공간을 선택해 주세요!</h5>
-                        <ul class="inquiry_btn_wrap">
+                        <ul class="inquiry_btn_wrap single_choice">
                             <li class="inquiry_btn1 checked">
                                 <span>오피스</span>
                             </li>
@@ -361,7 +360,6 @@
 
         //code_number
         $('.codeNum_area .input_wrap input').on('keyup propertychange', function(){
-            
             $(this).closest('.codeNum_area').find('.btn').attr('disabled', false);
         })
         
@@ -401,6 +399,7 @@
             })
 
         });
+
         $('.check_btn').on('click', function(){
             let code_check = /^[0-9]*$/;
             let codeNum_val = $(this).closest('.codeNum_area').find('.input_wrap input').val();
@@ -466,8 +465,7 @@
         });
 
         $('#inquiry_alert_popup4 .confirm_btn').on('click', function(){
-            $('.alert_dim').removeClass('on');
-            $('#service_inquiry_main1').addClass('on');
+            location.reload();
         });
         
         

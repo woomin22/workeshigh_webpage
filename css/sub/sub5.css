@@ -722,6 +722,9 @@
 #service_inquiry2_1 .popup_content_area .service_inquiry_content1 .inquiry_question {
   margin-top: 20px;
 }
+#service_inquiry2_1 .popup_content_area .service_inquiry_content1 .inquiry_question .input_wrap {
+  max-width: initial;
+}
 #service_inquiry2_1 .popup_content_area .service_inquiry_content2 .inquiry_question {
   display: block;
   margin-top: 30px;
@@ -759,6 +762,9 @@
 }
 #service_inquiry2_1 .popup_content_area .service_inquiry_content3 .inquiry_question {
   margin-top: 20px;
+}
+#service_inquiry2_1 .popup_content_area .service_inquiry_content3 .inquiry_question .input_wrap {
+  max-width: initial;
 }
 
 #service_inquiry2_2 .popup_content_area .service_inquiry_content .inquiry_question {
@@ -1235,8 +1241,10 @@
     bottom: -21px;
     font-size: 12px;
     line-height: 17px;
+    white-space: nowrap;
   }
   .inquiry_popup .popup_content_area .popup_content_desc .inquiry_question .input_textButton_wrap .btn {
+    min-width: 70px;
     margin-left: 8px;
     padding: 0 12px;
     font-size: 13px;
