@@ -180,6 +180,9 @@
   font-size: 14px;
   line-height: 19px;
 }
+.inquiry_popup .popup_content_area .popup_content_desc .inquiry_question .input_wrap em.on {
+  display: block;
+}
 .inquiry_popup .popup_content_area .popup_content_desc .inquiry_question .input_textButton_wrap {
   display: flex;
   width: 100%;
