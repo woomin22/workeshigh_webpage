@@ -31,7 +31,6 @@
                 font-weight: 700;
                 font-size: 48px;
                 line-height: 70px;
-                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
             }
             p{
                 width: 620px;
@@ -39,7 +38,6 @@
                 color: #fff;
                 font-size: 24px;
                 line-height: 35px;
-                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                 span{
                     display: block;
                 }
@@ -305,8 +303,6 @@
     .aside_area{
         .desc{
             width: 50%;
-            padding-top: 144px;
-            margin-left: 50%;
             h4{
                 margin-bottom: 20px;
                 font-weight: 700;
@@ -352,7 +348,10 @@
                 top: 116px;
                 right: 58.542%;
                 width: 796px;
-                //width: 892px;
+            }
+            .desc{
+                padding: 144px 10px 0;
+                margin-left: 50%;
             }
         }
     }
@@ -364,16 +363,6 @@
 #sub2_2{
     .cont_img{
         background: url("../../images/sub2/sub2_2_visual_img.png") no-repeat center/cover;
-        // &:after{
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     display: block;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 57.53%), radial-gradient(29.71% 32.37% at 33.57% 52.31%, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0) 100%)
-        // }
     }
     .sect2{
         .cont_title{
@@ -434,7 +423,6 @@
             width: 100%;
         }
     }
-/* 수정 ........ sect3다 수정해*/
     .sect3{
         background: #f5f5f5;
         .aside_area{
@@ -450,12 +438,10 @@
             .desc{
                 max-width: 1260px;
                 width: 100%;
-                padding: 112px 10px 0;
                 margin: auto;
+                padding: 112px 10px 0;
                 p{
-                    span{
-                        display: block;
-                    }
+                    width: 63.625%;
                 }
             }
         }
@@ -623,7 +609,11 @@
 }
 
 @media screen and (max-width: 1024px) {
-
+    .sect1{
+        .cont_img .desc{
+            right: 0;
+        }
+    }
     #sub2_2{
         .sect3{
             .aside_area{
@@ -651,11 +641,13 @@
             }
         }
         .cont_img{
-            height: 320px;
+            height: 420px;
             margin-top: 20px;
             .desc{
+                top: initial;
+                bottom: 50px;
                 right: 50%;
-                transform: translate(50%, -50%);
+                transform: translate(50%, 0);
                 text-align: center;
                 h3{
                     font-size: 28px;
@@ -663,10 +655,10 @@
                 }
                 p{
                     width: 312px;
-                    padding: 0 10px;
+                    padding: 0 24px;
                     margin-top: 8px;
-                    font-size: 16px;
-                    line-height: 22px;
+                    font-size: 14px;
+                    line-height: 20px;
                     span{
                         display: inline;
                     }
@@ -860,7 +852,6 @@
                 width: 86.667%;
                 padding-top: 50px;
                 margin: auto;
-                text-align: center;
                 h4{
                     margin-bottom: 8px;
                     font-size: 28px;
@@ -873,7 +864,7 @@
                 .btn{
                     width: 120px;
                     height: 44px;
-                    margin: 20px auto 0;
+                    margin-top: 20px;
                     font-size: 14px;
                 }
             }
@@ -882,6 +873,12 @@
 
     /* ---------- sub2_1 ---------- */
     #sub2_1{
+        .sect1 .cont_img{
+            background: url('../../images/sub2/sub2_1_mb_img.png') no-repeat  50% 20px/auto, #80B3FF;
+            .desc p span{
+                display: block;
+            }
+        }
         .sect2{
             .content1 .content_inner>div:nth-child(2){
                 padding-top: 0;
@@ -896,10 +893,10 @@
         }
         .sect3{
             .aside_area .img_box{
-                top: 271px;
+                top: 260px;
                 right: initial;
-                left: -13px;
-                width: 236px;
+                left: 0px;
+                width: 266px;
                 
             }
         }
@@ -907,8 +904,17 @@
 
     /* ---------- sub2_2 ---------- */
     #sub2_2{
+        .sect1 .cont_img{
+            background: url('../../images/sub2/sub2_2_mb_img.png') no-repeat  50% 20px/auto, #0066FF;
+        }
 
         .sect2{
+            ul.tab_list{
+                gap: 10px;
+                li{
+                    white-space: nowrap;
+                }
+            } 
             .cont_title{
                 flex-direction: column;
                 align-items: flex-start;
@@ -962,111 +968,115 @@
     }
 
     /* ---------- sub2_3 ---------- */
-        #sub2_3{
-            .sect2{
-                padding: 40px 0 0;
-                .content{
-                    padding-bottom: 50px;
-                }
-                .content1{
-                    .cont_desc{
-                        margin-top: 24px;
-                        flex-direction: column;
-                        .img_box{
-                            width: 100%;
-                            height: 323px;
-                        }
-                        ol{
-                            flex-direction: column;
-                            justify-content: flex-start;
-                            gap: 12px;
-                            width: 100%;
-                            height: auto;
-                            margin-top: 24px;
-                            li{
-                                padding: 10px 16px;
-                                .desc{
-                                    gap: 20px;
-                                    .icon_box{
-                                        width: 80px;
-                                    }
-                                    p{
-                                        font-size: 16px;
-                                        line-height: 23px;                                         
-                                    }
-                                }
-                            }
-                        }
+    #sub2_3{
+        .sect1 .cont_img{
+            background: url('../../images/sub2/sub2_3_mb_img.png') no-repeat  50% 20px/auto, #E4E4E4;
+        }
+        .sect2{
+            padding: 40px 0 0;
+            .content{
+                padding-bottom: 50px;
+            }
+            .content1{
+                .cont_desc{
+                    margin-top: 24px;
+                    flex-direction: column;
+                    .img_box{
+                        width: 100%;
+                        height: 323px;
+                        background: url('../../images/sub2/map_mb_img.png') no-repeat center/contain, #f5f5f5;
                     }
-                }
-                .content2{
-                    .cont_table_area{
+                    ol{
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 12px;
+                        width: 100%;
+                        height: auto;
                         margin-top: 24px;
-                        .cont_table_inner{
-                            padding-bottom: 8px;
-                            overflow-x: scroll;
-                            &::-webkit-scrollbar{
-                                height: 4px;
-                            }
-                            &::-webkit-scrollbar-thumb{
-                                height: 4px;
-                                padding-top: 8px;
-                                background: rgba(51, 51, 51, 0.2);
-                                border-radius: 3px;
-                            }
-
-                            .cont_table{
-                                .col{
-                                    height: 48px;
-                                    strong, span{
-                                        font-size: 14px;
-                                        line-height: 19px;
-                                    }
-                                }
-                            }
-                        }
-                        .detail_info{
-                            margin-top: 12px;
-                            div{
-                                margin-bottom: 6px;
-                                font-size: 13px;
-                                line-height: 19px;
-                                .essential_item{
-                                    display: block;
-                                    width: 61px;
-                                    letter-spacing: -0.02em;
+                        li{
+                            padding: 10px 16px;
+                            .desc{
+                                gap: 20px;
+                                .icon_box{
+                                    width: 80px;
                                 }
                                 p{
-                                    width: calc(100% - 71px);
+                                    font-size: 16px;
+                                    line-height: 23px;                                         
                                 }
                             }
                         }
                     }
                 }
-                .content3{
-                    .service_list ul > li{
-                        width: 100%;
-                        .img_box{
-                            height: 270px;
-                            img{
-                                width: 125%;
-                                height: auto;
-                            }
+            }
+            .content2{
+                .cont_table_area{
+                    margin-top: 24px;
+                    .cont_table_inner{
+                        padding-bottom: 8px;
+                        overflow-x: scroll;
+                        &::-webkit-scrollbar{
+                            height: 4px;
                         }
-                        .desc{
-                            padding: 16px 0 30px;
+                        &::-webkit-scrollbar-thumb{
+                            height: 4px;
+                            padding-top: 8px;
+                            background: rgba(51, 51, 51, 0.2);
+                            border-radius: 3px;
                         }
 
-                        &:last-child .desc{
-                            padding-bottom: 0;
+                        .cont_table{
+                            .col{
+                                height: 48px;
+                                strong, span{
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                }
+                            }
+                        }
+                    }
+                    .detail_info{
+                        margin-top: 12px;
+                        div{
+                            margin-bottom: 6px;
+                            font-size: 13px;
+                            line-height: 19px;
+                            .essential_item{
+                                display: block;
+                                width: 61px;
+                                letter-spacing: -0.02em;
+                            }
+                            p{
+                                width: calc(100% - 71px);
+                            }
                         }
                     }
                 }
             }
-            .sect3{
-                padding: 0 0 50px;
+            .content3{
+                .service_list ul > li{
+                    width: 100%;
+                    .img_box{
+                        height: 270px;
+                        img{
+                            width: 125%;
+                            height: auto;
+                        }
+                    }
+                    .desc{
+                        padding: 16px 0 30px;
+                    }
+
+                    &:last-child .desc{
+                        padding-bottom: 0;
+                    }
+                }
             }
         }
+        .sect3{
+            padding: 0 0 50px;
+        }
+    }
 
 
 

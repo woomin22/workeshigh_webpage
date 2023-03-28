@@ -196,6 +196,34 @@
   font-size: 20px;
   white-space: nowrap;
 }
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area {
+  display: none;
+}
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area.on {
+  display: flex;
+}
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .input_wrap input {
+  padding-right: 65px;
+}
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .input_wrap b {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-weight: 400;
+  color: #4267EB;
+  font-size: 20px;
+  line-height: 1.45;
+}
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .input_wrap b i {
+  font-style: normal;
+}
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .check_btn {
+  display: none;
+}
+.inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .check_btn.on {
+  display: block;
+}
 .inquiry_popup .popup_content_area .popup_btm {
   padding: 0;
   background: none;
@@ -616,7 +644,7 @@
   cursor: pointer;
 }
 
-/* ---------- 개별 css ---------- */
+/* ---------- 개별 style ---------- */
 #service_inquiry_main1 .popup_content_area .popup_content_desc ol.inquiry_case_list {
   margin-bottom: 10px;
 }
@@ -1202,10 +1230,23 @@
   .inquiry_popup .popup_content_area .popup_content_desc .inquiry_question .input_wrap span {
     right: 4px;
   }
+  .inquiry_popup .popup_content_area .popup_content_desc .inquiry_question .input_wrap em {
+    left: 0;
+    bottom: -21px;
+    font-size: 12px;
+    line-height: 17px;
+  }
   .inquiry_popup .popup_content_area .popup_content_desc .inquiry_question .input_textButton_wrap .btn {
     margin-left: 8px;
     padding: 0 12px;
     font-size: 13px;
+    line-height: 19px;
+  }
+  .inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .input_wrap input {
+    padding-right: 44px;
+  }
+  .inquiry_popup .popup_content_area .popup_content_desc .codeNum_area .input_wrap b {
+    font-size: 14px;
     line-height: 19px;
   }
   .progress_value_area {
@@ -1413,6 +1454,7 @@
     font-size: 12px;
     line-height: 17px;
   }
+  /* ---------- 개별 style ---------- */
   #service_inquiry_main1 .popup_content_area .popup_content_desc ol.inquiry_case_list,
   #service_inquiry_main2 .popup_content_area .popup_content_desc ol.inquiry_case_list {
     margin-bottom: 40px;

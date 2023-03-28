@@ -211,6 +211,37 @@
                         white-space: nowrap;
                     }
                 }
+
+            }
+            .codeNum_area{
+                display: none;
+                &.on{
+                    display: flex;
+                }
+                .input_wrap{
+                    input{
+                        padding-right: 65px;
+                    }
+                    b{
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        font-weight: 400;
+                        color: #4267EB;
+                        font-size: 20px;
+                        line-height: 1.45;
+                        i{
+                            font-style: normal;
+                        }
+                    }
+                }
+                .check_btn{
+                    display: none;
+                    &.on{
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -660,7 +691,7 @@
 }
 
 
-/* ---------- 개별 css ---------- */
+/* ---------- 개별 style ---------- */
 #service_inquiry_main1{
     .popup_content_area .popup_content_desc{
         ol.inquiry_case_list{
@@ -1302,6 +1333,12 @@
                         span{
                             right: 4px;
                         }
+                        em{
+                            left: 0;
+                            bottom: -21px;
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
                     }
                     .input_textButton_wrap{
                         .btn{
@@ -1310,6 +1347,15 @@
                             font-size: 13px;
                             line-height: 19px;
                         }
+                    }
+                }
+                .codeNum_area .input_wrap{
+                    input{
+                        padding-right: 44px;
+                    }
+                    b{
+                        font-size: 14px;
+                        line-height: 19px;
                     }
                 }
             }
@@ -1540,7 +1586,7 @@
     }
 
 
-    
+/* ---------- 개별 style ---------- */ 
     #service_inquiry_main1,
     #service_inquiry_main2{
         .popup_content_area .popup_content_desc{
