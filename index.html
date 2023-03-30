@@ -392,6 +392,8 @@
                 <script>
                     var swiper1 = new Swiper(".sect2_slide", {
                       direction: "vertical",
+                      watchOverflow : true,
+                      mousewheel: true,
                       on: {
                         slideChangeTransitionEnd : function(){
                             let idx = this.activeIndex;
