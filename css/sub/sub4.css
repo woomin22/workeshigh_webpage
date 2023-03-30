@@ -16,6 +16,7 @@
   max-width: 1260px;
   padding: 80px 10px 54px;
   min-height: 640px;
+  height: calc(100vh - 732px);
   margin: auto;
 }
 #sub4 .sect1 .tab_content_wrap .content {
@@ -62,7 +63,7 @@
 #sub4 .sect1 .tab_content_wrap .content li p {
   height: 0;
   position: relative;
-  padding-left: 130px;
+  padding-left: 60px;
   font-size: 24px;
   line-height: 35px;
   overflow: hidden;
@@ -72,7 +73,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 70px;
+  left: 0;
   display: block;
   width: 50px;
   height: 50px;

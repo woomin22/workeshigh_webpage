@@ -270,7 +270,6 @@
 }
 .privacy_policy_area .txt_box {
   height: 0;
-  margin-top: 30px;
   font-size: 16px;
   color: #555;
   line-height: 22px;
@@ -280,6 +279,7 @@
   background-image: url("../../images/icon/icon-dropup-bl.svg");
 }
 .privacy_policy_area.open .txt_box {
+  margin-top: 30px;
   height: auto;
 }
 
@@ -1291,9 +1291,11 @@
     background-size: 12px;
   }
   .privacy_policy_area .txt_box {
-    margin-top: 20px;
     font-size: 12px;
     line-height: 17px;
+  }
+  .privacy_policy_area.open {
+    margin-top: 20px;
   }
   .popup_summary {
     padding: 20px;

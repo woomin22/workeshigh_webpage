@@ -44,7 +44,7 @@
 #sub1 .sect1 .section_inner .content1 .cont_img {
   height: 700px;
   border-radius: 30px;
-  background: url("../../images/visual-img2.png") no-repeat center right/cover;
+  background: url("../../images/visual-img3.png") no-repeat center right/cover;
 }
 #sub1 .sect1 .section_inner .content2 .content_inner {
   padding-left: 10px;
@@ -93,9 +93,11 @@
   line-height: 1.45;
   letter-spacing: -0.03em;
 }
+#sub1 .sect2 {
+  background: #F5F5F5;
+}
 #sub1 .sect2 .section_inner {
   padding: 60px 0;
-  background: #F5F5F5;
 }
 #sub1 .sect2 .section_inner .content {
   max-width: 1260px;
@@ -248,6 +250,9 @@
   width: 170px;
   height: 60px;
 }
+#sub1 .sect4 {
+  background: #F5F5F5;
+}
 #sub1 .sect4 .section_inner {
   background: #F5F5F5;
   padding: 60px 0;
@@ -399,6 +404,12 @@
     font-size: 13px;
     line-height: 19px;
   }
+  #sub1 .sect1 .section_inner .content2 .content_inner ul li:nth-child(even) {
+    background: #f5f5f5;
+  }
+  #sub1 .sect1 .section_inner .content2 .content_inner ul li:nth-child(odd) {
+    background: #F6FAFF;
+  }
   #sub1 .sect2 .section_inner {
     padding: 50px 0;
   }
@@ -426,12 +437,12 @@
   }
   #sub1 .sect2 .section_inner .content1 .content_inner ol li b {
     width: 60px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 19px;
   }
   #sub1 .sect2 .section_inner .content1 .content_inner ol li span {
     max-width: calc(100% - 60px);
-    font-size: 13px;
+    font-size: 12px;
     line-height: 19px;
   }
   #sub1 .sect2 .section_inner .content2 {

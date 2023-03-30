@@ -30,6 +30,7 @@ header .header_inner .gnb_area ol {
   display: flex;
   gap: 62px;
   font-size: 20px;
+  font-weight: 500;
 }
 header .header_inner .gnb_area ol > li > a {
   line-height: 100px;
@@ -67,6 +68,9 @@ header .header_inner .gnb_area ol .gnb_list2 .depth_list {
 }
 header .header_inner .gnb_area ol .gnb_list2 .depth_list a {
   line-height: 30px;
+}
+header .header_inner .gnb_area ol .gnb_list2 .depth_list li:hover a {
+  color: #4267EB;
 }
 header .header_inner .gnb_area ol .gnb_list2 .depth_list.active {
   height: auto;
@@ -247,17 +251,35 @@ footer .mobile .footer_bottom .contact_area ul li:first-child {
   gap: 28px;
 }
 .section_inner ul.tab_list li {
+  position: relative;
   color: #C1C1C1;
   font-size: 24px;
   font-weight: 500;
   line-height: 55px;
-  border-bottom: 1px solid transparent;
   cursor: pointer;
+  transition: 0.3s;
+}
+.section_inner ul.tab_list li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #111;
+  transition: 0.3s;
+}
+.section_inner ul.tab_list li:hover {
+  color: #4267EB;
+  font-weight: 700;
 }
 .section_inner ul.tab_list li.active {
   color: #111;
   font-weight: 700;
-  border-color: #111;
+}
+.section_inner ul.tab_list li.active::after {
+  width: 100%;
 }
 
 .aside_cont {
@@ -300,21 +322,6 @@ footer .mobile .footer_bottom .contact_area ul li:first-child {
   width: 12px;
   height: 12px;
   background: url("../images/icon/icon-star.svg") no-repeat center/contain;
-}
-
-.dim {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 40;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(51, 51, 51, 0.6);
-  backdrop-filter: blur(5px);
-}
-.dim.on {
-  display: block;
 }
 
 /* ---------- btn ---------- */
@@ -465,6 +472,7 @@ footer .mobile .footer_bottom .contact_area ul li:first-child {
 .select_wrap .selected .selected_value {
   width: 51.875%;
   font-weight: 500;
+  color: #4267EB;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -874,7 +882,7 @@ input[type=text]:focus {
     padding: 16px;
   }
   header .header_inner .gnb_area.open ol {
-    height: auto;
+    height: calc(100vh - 56px);
     padding: 40px 0;
   }
   header .header_inner .service_area {

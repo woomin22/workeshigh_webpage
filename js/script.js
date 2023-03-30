@@ -16,6 +16,7 @@ $(document).ready(function() {
         $(this).closest('.select_wrap').find('.selected_value').text(option_val);
         $(this).closest('.select_wrap').toggleClass('active');
     });
+    
     $('.radio_list').click(function(){
         let checkde_radio2 = $(this).find('input:radio').is(':checked');
         if(checkde_radio2 !== true){
@@ -71,9 +72,9 @@ $(document).ready(function() {
         $('.popup_dim').removeClass('on');
     });
 
-    $('#service_request_btn2').on('click', function(){
-        $('#popup_area').load('../includes/sub5_2.html');
-    });
+    $('.service_request_btn').click(function(){
+        $('#popup_area').load('../includes/sub5_1.html');
+    })
     $('.product_info_btn1').on('click', function(){
         $('#popup_area').load('../includes/sub5_3_1.html');
     });
