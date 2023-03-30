@@ -405,9 +405,11 @@
                             $('.sect2 .tab_list li').removeClass('active');
                             $('.sect2 .tab_list li').eq(idx).addClass('active');
 
+                        },
+                        slideChange: function() {
                             setTimeout(function () {
-                                swiper.params.touchReleaseOnEdges = false;
-                            }, 500);
+                            swiper.params.touchReleaseOnEdges = false;  
+                            });
                         },
                         reachEnd: function() {
                             setTimeout(function () {
