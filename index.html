@@ -103,7 +103,7 @@
                                 <h2 class="main_title">
                                     <span>세상에서 가장 가까운</span>
                                     <span>나만의 스토어</span>
-                                    <h1 style="color: blue; font-size: 50px; margin-top: 30px;">수정</h1>
+                                    <h1 style="color: yellow; font-size: 50px; margin-top: 30px;">수정</h1>
                                 </h2>
                                 <div class="cont_img">
                                     <!-- <img src="./images/visual-img1.png" alt="워커스하이"> -->
@@ -393,7 +393,8 @@
                 <script>
                     var swiper1 = new Swiper(".sect2_slide", {
                       direction: "vertical",
-                      
+                      watchOverflow : true,
+
                       on: {
                         slideChangeTransitionEnd : function(){
                             let idx = this.activeIndex;
@@ -410,16 +411,19 @@
                         slideChange: function() {
                             setTimeout(function () {
                             swiper1.params.touchReleaseOnEdges = false;  
+                            swiper1.params.mousewheel.releaseOnEdges = false;
                             });
                         },
                         reachEnd: function() {
                             setTimeout(function () {
                                 swiper1.params.touchReleaseOnEdges = true;
+                                swiper1.params.mousewheel.releaseOnEdges = true;
                             }, 500);
                         },
                         reachBeginning: function() {
                             setTimeout(function () {
                                 swiper1.params.touchReleaseOnEdges = true;
+                                swiper1.params.mousewheel.releaseOnEdges = true;
                             }, 500);
                         },
                       }
