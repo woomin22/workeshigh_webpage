@@ -102,8 +102,8 @@
                             <div class="content_inner">
                                 <h2 class="main_title">
                                     <span>세상에서 가장 가까운</span>
-                                    <span >나만의 스토어</span>
-                                    <h1 style="color: red; font-size: 50px; margin-top: 30px;">수정</h1>
+                                    <span>나만의 스토어</span>
+                                    <h1 style="color: blue; font-size: 50px; margin-top: 30px;">수정</h1>
                                 </h2>
                                 <div class="cont_img">
                                     <!-- <img src="./images/visual-img1.png" alt="워커스하이"> -->
@@ -393,58 +393,36 @@
                 <script>
                     var swiper1 = new Swiper(".sect2_slide", {
                       direction: "vertical",
-                      mousewheel: true,
-                      watchOverflow : true,
-                    //   on: {
-                    //     slideChangeTransitionEnd : function(){
-                    //         let idx = this.activeIndex;
-                    //         if(idx == 3){
-                    //             $('.sect2').addClass('height_change');
-                    //             swiper1.slideTo(idx, 700);
-                    //         }else{
-                    //             $('.sect2').removeClass('height_change');
-                    //             swiper1.slideTo(idx, 700);
-                    //         } 
-                    //         $('.sect2 .tab_list li').removeClass('active');
-                    //         $('.sect2 .tab_list li').eq(idx).addClass('active');
-
-                    //     },
-                    //     slideChange: function() {
-                    //         setTimeout(function () {
-                    //         swiper.params.touchReleaseOnEdges = false;  
-                    //         });
-                    //     },
-                    //     reachEnd: function() {
-                    //         setTimeout(function () {
-                    //             swiper.params.touchReleaseOnEdges = true;
-                    //         }, 500);
-                    //     },
-                    //     reachBeginning: function() {
-                    //         setTimeout(function () {
-                    //             swiper.params.touchReleaseOnEdges = true;
-                    //         }, 500);
-                    //     },
-                    //   }
-                    on: {
+                      
+                      on: {
+                        slideChangeTransitionEnd : function(){
+                            let idx = this.activeIndex;
+                            if(idx == 3){
+                                $('.sect2').addClass('height_change');
+                                swiper1.slideTo(idx, 700);
+                            }else{
+                                $('.sect2').removeClass('height_change');
+                                swiper1.slideTo(idx, 700);
+                            } 
+                            $('.sect2 .tab_list li').removeClass('active');
+                            $('.sect2 .tab_list li').eq(idx).addClass('active');
+                        },
                         slideChange: function() {
                             setTimeout(function () {
-                                swiper.params.touchReleaseOnEdges = false;  
-                                swiper.params.mousewheel.releaseOnEdges = false;
+                            swiper1.params.touchReleaseOnEdges = false;  
                             });
                         },
                         reachEnd: function() {
                             setTimeout(function () {
-                                    swiper.params.touchReleaseOnEdges = true;
-                                    swiper.params.mousewheel.releaseOnEdges = true;
+                                swiper1.params.touchReleaseOnEdges = true;
                             }, 500);
                         },
                         reachBeginning: function() {
                             setTimeout(function () {
-                                    swiper.params.touchReleaseOnEdges = true;ㅎ
-                                    swiper.params.mousewheel.releaseOnEdges = true;
+                                swiper1.params.touchReleaseOnEdges = true;
                             }, 500);
-                        }
-                    }
+                        },
+                      }
                     });
 
                     $('.sect2 .tab_list li').click(function(){
@@ -484,10 +462,6 @@
                         slidesPerView: "auto",
                         centeredSlides: true,
                         spaceBetween: 20,
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
                         pagination: {
                             el: ".swiper-pagination",
                         },
@@ -859,10 +833,6 @@
                         slidesPerView: "auto",
                         centeredSlides: true,
                         spaceBetween: 20,
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
                         pagination: {
                             el: ".swiper-pagination",
                         },
