@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/mainplease.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -103,7 +103,7 @@
                                 <h2 class="main_title">
                                     <span>세상에서 가장 가까운</span>
                                     <span>나만의 스토어</span>
-                                    <h1 style="color: violet; font-size: 50px; margin-top: 30px;">수정</h1>
+                                    <h1 style="color: yellow; font-size: 50px; margin-top: 30px;">수정</h1>
                                 </h2>
                                 <div class="cont_img">
                                     <!-- <img src="./images/visual-img1.png" alt="워커스하이"> -->
@@ -124,9 +124,9 @@
                                     <li>장점</li>
                                     <li>설비</li>
                                 </ul>
-                                <div class="swiper sect2_slide" style="touch-action: auto;">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide swiper-slide1">
+                                <div class="vertical_slide vertical_slide1">
+                                    <div class="vertical_slide_wrap">
+                                        <div class="vertical_slide_cont vertical_slide_cont1">
                                             <div class="slide_cont">
                                                 <h4>“가정보다 더 오래 머무를 수 있는 공간: 오피스<br/>직원들의 복지를 위한 프리미엄 스낵바”</h4>
                                                 <div class="swiper sect2_cont_slide1">
@@ -159,7 +159,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide swiper-slide2">
+                                        <div class="vertical_slide_cont vertical_slide_cont2">
                                             <div class="slide_cont pc">
                                                 <h4>
                                                     “오피스에서 만나는 호텔 서비스,<br/>프리미엄 간식 제공을 통해 복지의 수준을 높이다”
@@ -230,7 +230,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide swiper-slide3">
+                                        <div class="vertical_slide_cont vertical_slide_cont3">
                                             <div class="slide_cont">
                                                 <h4>구독 서비스의 장점</h4>
                                                 <div class="swiper sect2_cont_slide3">
@@ -308,7 +308,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide swiper-slide4">
+                                        <div class="vertical_slide_cont vertical_slide_cont4">
                                             <div class="slide_cont">
                                                 <h4>스토어 제품의 장점</h4>
                                                 <div class="slide_cont_area">
@@ -393,7 +393,7 @@
                 <script>
                     var swiper1 = new Swiper(".sect2_slide", {
                       direction: "vertical",
-                      touchRatio: 0,
+                      watchOverflow : true,
                       on: {
                         slideChangeTransitionEnd : function(){
                             let idx = this.activeIndex;
@@ -484,7 +484,7 @@
                                     <li>장점</li>
                                     <li>설비</li>
                                 </ul>
-                                <div class="swiper sect3_slide" style="touch-action: auto;">
+                                <div class="swiper sect3_slide">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide swiper-slide1">
                                             <div class="slide_cont">
@@ -779,7 +779,6 @@
                 <script>
                     var swiper2 = new Swiper(".sect3_slide", {
                       direction: "vertical",
-                      touchRatio: 0,
                       on: {
                         slideChangeTransitionEnd : function(){
                             $('.sect3 .tab_list li').removeClass('active');
