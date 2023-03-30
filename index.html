@@ -125,10 +125,10 @@
                                 </ul>
                                 <div class="swiper sect2_slide" style="touch-action: pan-y;">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide swiper-slide1">
+                                        <div class="swiper-slide swiper-slide1" >
                                             <div class="slide_cont">
-                                                <h4>“가정보다 더 오래 머무를 수 있는 공간: 오피스<br/>직원들의 복지를 위한 프리미엄 스낵바”</h4>
-                                                <div class="swiper sect2_cont_slide1">
+                                                <h4 data-aos="fade-up" data-aos-duration="300" class="fade_animation1">“가정보다 더 오래 머무를 수 있는 공간: 오피스<br/>직원들의 복지를 위한 프리미엄 스낵바”</h4>
+                                                <div class="swiper sect2_cont_slide1 fade_animation2" data-aos="fade-up" data-aos-duration="500">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="img_box"><img src="./images/main/main_slide1_1.png" alt="스낵바"></div>
@@ -405,7 +405,19 @@
                             } 
                             $('.sect2 .tab_list li').removeClass('active');
                             $('.sect2 .tab_list li').eq(idx).addClass('active');
+               
+                            $('.sect2_slide>.swiper-wrapper>.swiper-slide .slide_cont>*').removeClass('fade_animation1');
+                            $('.sect2_slide>.swiper-wrapper>.swiper-slide .slide_cont>*').removeClass('fade_animation2');
+                            $('.sect2_slide>.swiper-wrapper>.swiper-slide').eq(idx).find('.slide_cont>h4').addClass('fade_animation1');
+                            $('.sect2_slide>.swiper-wrapper>.swiper-slide').eq(idx).find('.slide_cont>div').addClass('fade_animation2');
+
                         },
+                        slideChange : function(){
+
+                        },
+                        update: function(){
+
+                        }   
                       }
                     });
 
@@ -422,7 +434,7 @@
                             swiper1.slideTo(idx, 700);
                         }                      
                     })
-
+                            
                     var swiper1_1 = new Swiper(".sect2_cont_slide1", {
                         slidesPerView: "auto",
                         centeredSlides: true,
@@ -469,7 +481,6 @@
                                 spaceBetween: 70,
                             },
                         },
-
                     });
                 </script>
                 <section class="sect3">
@@ -487,10 +498,10 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide swiper-slide1">
                                             <div class="slide_cont">
-                                                <h4>
+                                                <h4 data-aos="fade-up" data-aos-duration="300" class="fade_animation1">
                                                     “공간의 가치를 높일 수 있는<br/>프리미엄 마이크로 스토어”
                                                 </h4>
-                                                <div class="swiper sect3_cont_slide1">
+                                                <div class="swiper sect3_cont_slide1 fade_animation2" data-aos="fade-up" data-aos-duration="500">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="img_box"><img src="./images/main/main_slide2_1.png" alt="프리미엄 매대"></div>
@@ -783,6 +794,12 @@
                         slideChangeTransitionEnd : function(){
                             $('.sect3 .tab_list li').removeClass('active');
                             $('.sect3 .tab_list li').eq(this.activeIndex).addClass('active');
+
+                            $('.sect3_slide>.swiper-wrapper>.swiper-slide .slide_cont>*').removeClass('fade_animation1');
+                            $('.sect3_slide>.swiper-wrapper>.swiper-slide .slide_cont>*').removeClass('fade_animation2');
+                            $('.sect3_slide>.swiper-wrapper>.swiper-slide').eq(this.activeIndex).find('.slide_cont>h4').addClass('fade_animation1');
+                            $('.sect3_slide>.swiper-wrapper>.swiper-slide').eq(this.activeIndex).find('.slide_cont>i').addClass('fade_animation1');
+                            $('.sect3_slide>.swiper-wrapper>.swiper-slide').eq(this.activeIndex).find('.slide_cont>div').addClass('fade_animation2');
                         }
                       }
                     });
@@ -792,6 +809,7 @@
                         $(this).addClass('active')
                         let idx = $(this).index()
                         swiper2.slideTo(idx, 700)
+
                     })
 
                     var swiper2_1 = new Swiper(".sect3_cont_slide1", {
@@ -841,6 +859,14 @@
                             },
                         },
 
+                        on:{
+                            reachEnd: function(){
+                                let activeIdx = swiper2_3.activeIdx
+                                activeIdx = activeIdx  - 1
+                                alert(activeIdx)
+                            }
+                        }
+
                     });
 
                     var swiper2_4 = new Swiper(".sect3_cont_slide4", {
@@ -866,7 +892,7 @@
                                     신청 프로세스
                                 </h3>
                                 <ol class="cont_list">
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-duration="500">
                                         <div class="desc desc1">
                                             <b>01</b>
                                             <div class="icon_box">
@@ -875,7 +901,7 @@
                                             <p class="spacing">서비스 신청서 작성</p>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-duration="500">
                                         <div class="desc desc2">
                                             <b>02</b>
                                             <div class="icon_box">
@@ -884,7 +910,7 @@
                                             <p>담당자 배정 및 조건 협의</p>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-duration="500">
                                         <div class="desc desc3">
                                             <b>03</b>
                                             <div class="icon_box">
@@ -893,7 +919,7 @@
                                             <p>전담 매니저 방문 후 공간 실측</p>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-duration="500">
                                         <div class="desc desc4">
                                             <b>04</b>
                                             <div class="icon_box">
@@ -902,7 +928,7 @@
                                             <p>계약 체결</p>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-duration="500">
                                         <div class="desc desc5">
                                             <b>05</b>
                                             <div class="icon_box">
@@ -913,7 +939,7 @@
                                             </p>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-duration="500">
                                         <div class="desc desc6">
                                             <b>06</b>
                                             <div class="icon_box">
@@ -942,5 +968,9 @@
     </div>
 
     <div id="popup_area"></div>
+
+    <script>
+        AOS.init();
+   </script>
 </body>
 </html>

@@ -353,6 +353,7 @@
   font-weight: 500;
   line-height: 46px;
   text-align: center;
+  opacity: 0;
 }
 #main .slide_cont i {
   display: block;
@@ -363,6 +364,10 @@
   font-style: normal;
   line-height: 35px;
   text-align: center;
+  opacity: 0;
+}
+#main .slide_cont > div {
+  opacity: 0;
 }
 #main .slide_cont .swiper-slide {
   position: relative;

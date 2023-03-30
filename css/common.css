@@ -826,6 +826,24 @@ input[type=text]:focus {
   line-height: 26px;
 }
 
+.fade_animation1 {
+  animation: fade_up 0.3s forwards;
+}
+
+.fade_animation2 {
+  animation: fade_up 0.5s forwards;
+}
+
+@keyframes fade_up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 /* ---------- tablet & mobile ---------- */
 @media screen and (max-width: 768px) {
   .pc {

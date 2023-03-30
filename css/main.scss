@@ -413,6 +413,7 @@
             font-weight: 500;
             line-height: 46px;
             text-align: center;
+            opacity: 0;
         }
         i{
             display: block;
@@ -423,6 +424,10 @@
             font-style: normal;
             line-height: 35px;
             text-align: center;
+            opacity: 0;
+        }
+        >div{
+            opacity: 0;
         }
         .swiper-slide{
             position: relative;
