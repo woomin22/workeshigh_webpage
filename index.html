@@ -394,8 +394,30 @@
                       direction: "vertical",
                       on: {
                         slideChangeTransitionEnd : function(){
+                            let idx = this.activeIndex;
+                            if(idx == 3){
+                                $('.sect2').addClass('height_change');
+                                swiper1.slideTo(idx, 700);
+                            }else{
+                                $('.sect2').removeClass('height_change');
+                                swiper1.slideTo(idx, 700);
+                            } 
                             $('.sect2 .tab_list li').removeClass('active');
-                            $('.sect2 .tab_list li').eq(this.activeIndex).addClass('active');
+                            $('.sect2 .tab_list li').eq(idx).addClass('active');
+
+                            setTimeout(function () {
+                                swiper.params.touchReleaseOnEdges = false;
+                            }, 500);
+                        },
+                        reachEnd: function() {
+                            setTimeout(function () {
+                                swiper.params.touchReleaseOnEdges = true;
+                            }, 500);
+                        },
+                        reachBeginning: function() {
+                            setTimeout(function () {
+                                swiper.params.touchReleaseOnEdges = true;
+                            }, 500);
                         }
                       }
                     });
