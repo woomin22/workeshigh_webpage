@@ -1,6 +1,12 @@
 .mobile{
     display: none !important;
 }
+.hidden{
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden !important;
+    touch-action:none;
+}
 
 header{
     position: fixed;
@@ -778,8 +784,7 @@ input[type='text']:focus{
             }
         }
     }
-    .range_box_wrap3 .range_full_background .range_dot_wrap li,
-    .range_box_wrap4 .range_full_background .range_dot_wrap li{
+    .range_box_wrap3 .range_full_background .range_dot_wrap li{
         &:nth-child(1):after{content: "50";}
         &:nth-child(2):after{content: "100";}
         &:nth-child(3):after{content: "200";}
@@ -791,6 +796,19 @@ input[type='text']:focus{
         &:nth-child(9):after{content: "800";}
         &:nth-child(10):after{content: "900";}
         &:nth-child(11):after{content: "1,000이상";}
+    }
+    .range_box_wrap4 .range_full_background .range_dot_wrap li{
+        &:nth-child(1):after{content: "0%";}
+        &:nth-child(2):after{content: "10%";}
+        &:nth-child(3):after{content: "20%";}
+        &:nth-child(4):after{content: "30%";}
+        &:nth-child(5):after{content: "40%";}
+        &:nth-child(6):after{content: "50%";}
+        &:nth-child(7):after{content: "60%";}
+        &:nth-child(8):after{content: "70%";}
+        &:nth-child(9):after{content: "80%";}
+        &:nth-child(10):after{content: "90%";}
+        &:nth-child(11):after{content: "100%";}
     }
     .range_box_wrap1 .range_full_background .range_dot_wrap li{
         &:nth-child(1):after{content: "10";}
@@ -848,7 +866,6 @@ input[type='text']:focus{
 }
 
 
-
 @media screen and (max-width: 1024px) {
 
 }
@@ -871,6 +888,7 @@ input[type='text']:focus{
             h1.logo a{
                 width: 135px;
                 height: 22px;
+                background-image: url('../images/logo_mo_bk.svg');
             }
             .gnb_area{
                 ol{

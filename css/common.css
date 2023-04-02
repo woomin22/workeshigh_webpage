@@ -3,6 +3,13 @@
   display: none !important;
 }
 
+.hidden {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
 header {
   position: fixed;
   z-index: 50;
@@ -741,49 +748,71 @@ input[type=text]:focus {
   font-size: 16px;
   line-height: 24px;
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(1):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(1):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(1):after {
   content: "50";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(2):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(2):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(2):after {
   content: "100";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(3):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(3):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(3):after {
   content: "200";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(4):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(4):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(4):after {
   content: "300";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(5):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(5):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(5):after {
   content: "400";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(6):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(6):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(6):after {
   content: "500";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(7):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(7):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(7):after {
   content: "600";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(8):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(8):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(8):after {
   content: "700";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(9):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(9):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(9):after {
   content: "800";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(10):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(10):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(10):after {
   content: "900";
 }
-.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(11):after,
-.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(11):after {
+.input_range_area .range_box_wrap3 .range_full_background .range_dot_wrap li:nth-child(11):after {
   content: "1,000이상";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(1):after {
+  content: "0%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(2):after {
+  content: "10%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(3):after {
+  content: "20%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(4):after {
+  content: "30%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(5):after {
+  content: "40%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(6):after {
+  content: "50%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(7):after {
+  content: "60%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(8):after {
+  content: "70%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(9):after {
+  content: "80%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(10):after {
+  content: "90%";
+}
+.input_range_area .range_box_wrap4 .range_full_background .range_dot_wrap li:nth-child(11):after {
+  content: "100%";
 }
 .input_range_area .range_box_wrap1 .range_full_background .range_dot_wrap li:nth-child(1):after {
   content: "10";
@@ -859,6 +888,7 @@ input[type=text]:focus {
   header .header_inner h1.logo a {
     width: 135px;
     height: 22px;
+    background-image: url("../images/logo_mo_bk.svg");
   }
   header .header_inner .gnb_area ol {
     position: absolute;

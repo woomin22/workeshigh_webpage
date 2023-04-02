@@ -61,7 +61,19 @@ $('#service_inquiry2_4 .next_btn').on('click', function(){
 $('.confirm_btn').on('click', function () {
     $('.alert_dim').removeClass('on');
     $('.inquiry_alert_popup').removeClass('on');
+    $('html, body').removeClass('hidden');
 });
+
+// 정보 수정
+$('.edit_btn1').on('click', function () {
+    $('.inquiry_popup').removeClass('on');
+    $('#service_inquiry2_1').addClass('on');
+});
+$('.edit_btn2').on('click', function () {
+    $('.inquiry_popup').removeClass('on');
+    $('#service_inquiry4_1').addClass('on');
+});
+
 
 // text_box
 $('.input_wrap input').on('focus', function () {
@@ -175,9 +187,13 @@ $('.check_box_wrap').on('click', function () {
         $(this).closest('.popup_content_area').find('.submit_btn').attr('disabled', true)
     }
 })
-$('.submit_btn').on('click', function () {
+$('.submit_btn1').on('click', function () {
     $('.alert_dim').addClass('on');
     $('#inquiry_alert_popup2').addClass('on');
+});
+$('.submit_btn2').on('click', function () {
+    $('.alert_dim').addClass('on');
+    $('#inquiry_alert_popup2_1').addClass('on');
 });
 
 $('#inquiry_alert_popup2 .confirm_btn').on('click', function () {
@@ -186,13 +202,31 @@ $('#inquiry_alert_popup2 .confirm_btn').on('click', function () {
     $('.inquiry_popup').removeClass('on');
     $('#inquiry_alert_popup2').removeClass('on');
     $('#inquiry_alert_popup4').addClass('on');
-});
-$('#inquiry_alert_popup2 .cancel_btn').on('click', function () {
-    $('.alert_dim').removeClass('on');
-    $('#inquiry_alert_popup2').removeClass('on');
+
 });
 
-$('#inquiry_alert_popup4 .confirm_btn').on('click', function () {
+$('#inquiry_alert_popup2_1 .confirm_btn').on('click', function () {
+    $('.alert_dim').addClass('on');
+
+    let option_has = $('#option_select_btn li').eq(0).hasClass('checked');
+    if(option_has !== true){
+        $('.inquiry_popup').removeClass('on');
+        $('#inquiry_alert_popup2').removeClass('on');
+        $('#inquiry_alert_popup5_2').addClass('on');
+    }else{
+        $('.inquiry_popup').removeClass('on');
+        $('#inquiry_alert_popup2').removeClass('on');
+        $('#inquiry_alert_popup5_1').addClass('on');
+    }
+});
+
+$('#inquiry_alert_popup2 .cancel_btn, #inquiry_alert_popup2_1 .cancel_btn').on('click', function () {
+    $('.alert_dim').removeClass('on');
+    $('#inquiry_alert_popup2').removeClass('on');
+    $('#inquiry_alert_popup2_1').removeClass('on');
+});
+
+$('#inquiry_alert_popup4 .confirm_btn, #inquiry_alert_popup5_1 .confirm_btn, #inquiry_alert_popup5_2 .confirm_btn').on('click', function () {
     location.reload();
 });
 

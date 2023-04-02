@@ -1028,6 +1028,12 @@
         }
     }
 
+    #header_area.on header .header_inner{
+        h1.logo a{
+            background-image: url('../images/logo_mo_wh.svg');
+        }
+    }          
+
     #header_area.mainOn{
         header{
             background: #fff;

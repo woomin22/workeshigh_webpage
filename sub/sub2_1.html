@@ -290,7 +290,7 @@
                                                 <ul>
                                                     <li>
                                                         <div class="img_box">
-                                                            <img src="../images/product_item/item3.png" alt="소형 쇼케이스">
+                                                            <img src="../images/product_item/item1.png" alt="소형 쇼케이스">
                                                         </div>
                                                         <div class="detail_info">
                                                             <h5>소형 쇼케이스</h5>
@@ -385,7 +385,7 @@
                                                                     <dd>월 200,000원 이상</dd>
                                                                 </dl>
                                                             </div>
-                                                            <span class="more_info_btn product_info_btn3">렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn2">렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -404,7 +404,7 @@
                                                                     <dd>월 200,000원 이상</dd>
                                                                 </dl>
                                                             </div>
-                                                            <span class="more_info_btn product_info_btn3">렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn2">렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -423,7 +423,7 @@
                                                                     <dd>월 1,000,000원 이상</dd>
                                                                 </dl>
                                                             </div>
-                                                            <span class="more_info_btn product_info_btn3">렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn2">렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -509,7 +509,7 @@
                                                                     </dl>
 
                                                                 </div>
-                                                                <span class="more_info_btn product_info_btn2">렌탈 가격 보기</span>
+                                                                <span class="more_info_btn product_info_btn1">렌탈 가격 보기</span>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -568,7 +568,14 @@
 
                         let sectST2 = $('.sect2').offset().top;
                         $('html').stop().animate({'scrollTop': sectST2}, 300)
-                        
+                    });
+                    $('.product_info_btn1').on('click', function(){
+                        $('#popup_area').load('../includes/sub5_3_1.html');
+                        $('html, body').addClass('hidden');
+                    });
+                    $('.product_info_btn2').on('click', function(){
+                        $('#popup_area').load('../includes/sub5_3_2.html');
+                        $('html, body').addClass('hidden');
                     });
                 </script>
                 <section class="sect3">

@@ -318,7 +318,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>KIOSK</h5>
-                                                                <span class="more_info_btn">
+                                                                <span class="more_info_btn product_info_btn2">
                                                                     더 알아보기
                                                                 </span>
                                                             </div>
@@ -329,7 +329,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>쇼케이스</h5>
-                                                                <span class="more_info_btn">
+                                                                <span class="more_info_btn product_info_btn2">
                                                                     더 알아보기
                                                                 </span>
                                                             </div>
@@ -340,7 +340,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>진열대</h5>
-                                                                <span class="more_info_btn">
+                                                                <span class="more_info_btn product_info_btn2">
                                                                     더 알아보기
                                                                 </span>
                                                             </div>
@@ -351,7 +351,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>하우징</h5>
-                                                                <span class="more_info_btn">
+                                                                <span class="more_info_btn product_info_btn1">
                                                                     더 알아보기
                                                                 </span>
                                                             </div>
@@ -362,7 +362,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>냉장고</h5>
-                                                                <span class="more_info_btn">
+                                                                <span class="more_info_btn product_info_btn1">
                                                                     더 알아보기
                                                                 </span>
                                                             </div>
@@ -373,7 +373,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>디스펜서</h5>
-                                                                <span class="more_info_btn">
+                                                                <span class="more_info_btn product_info_btn1">
                                                                     더 알아보기
                                                                 </span>
                                                             </div>
@@ -481,6 +481,15 @@
                                 spaceBetween: 70,
                             },
                         },
+                    });
+
+                    $('.product_info_btn1').on('click', function(){
+                        $('#popup_area').load('./includes/sub5_3_1_idx.html');
+                        $('html, body').addClass('hidden');
+                    });
+                    $('.product_info_btn2').on('click', function(){
+                        $('#popup_area').load('./includes/sub5_3_2_idx.html');
+                        $('html, body').addClass('hidden');
                     });
                 </script>
                 <section class="sect3">
@@ -696,7 +705,7 @@
                                                                         </dl>
                                                                     </div>
                                                                 </div>
-                                                                <span class="more_info_btn">더 알아보기</span>
+                                                                <span class="more_info_btn product_info_btn3">더 알아보기</span>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
@@ -733,7 +742,7 @@
                                                                         </dl>
                                                                     </div>
                                                                 </div>
-                                                                <span class="more_info_btn">더 알아보기</span>
+                                                                <span class="more_info_btn product_info_btn4">더 알아보기</span>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
@@ -770,7 +779,7 @@
                                                                         </dl>
                                                                     </div>
                                                                 </div>
-                                                                <span class="more_info_btn">더 알아보기</span>
+                                                                <span class="more_info_btn product_info_btn4">더 알아보기</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -860,11 +869,10 @@
                         },
 
                         on:{
-                            reachEnd: function(){
-                                let activeIdx = swiper2_3.activeIdx
-                                activeIdx = activeIdx  - 1
-                                alert(activeIdx)
-                            }
+                            // reachEnd: function(){
+                            //     let activeIdx = swiper2_3.activeIdx
+                            //     activeIdx = activeIdx  - 1
+                            // }
                         }
 
                     });
@@ -881,6 +889,15 @@
                             el: ".swiper-pagination",
                         },
 
+                    });
+                    $('.product_info_btn3').on('click', function(){
+                        
+                        $('#popup_area').load('./includes/sub5_3_3_idx.html');
+                        $('html, body').addClass('hidden')
+                    });
+                    $('.product_info_btn4').on('click', function(){
+                        $('#popup_area').load('./includes/sub5_3_4_idx.html');
+                        $('html, body').addClass('hidden');
                     });
                     
                 </script>

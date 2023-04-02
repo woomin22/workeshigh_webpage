@@ -119,7 +119,7 @@
                                                                     <span>하단 상온장</span>
                                                                     <span>고객 희망 옵션 추가 제작가능</span>
                                                                 </div>
-                                                                <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                                <span class="more_info_btn product_info_btn3">판매/렌탈 가격 보기</span>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -141,7 +141,7 @@
                                                                     <span>중형 냉장고 (430L)</span>
                                                                     <span>하단 상온장</span>
                                                                 </div>
-                                                                <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                                <span class="more_info_btn product_info_btn4">판매/렌탈 가격 보기</span>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -163,7 +163,7 @@
                                                                     <span>중형 냉장고 (430L)&#215;2</span>
                                                                     <span>하단 상온장</span>
                                                                 </div>
-                                                                <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                                <span class="more_info_btn product_info_btn4">판매/렌탈 가격 보기</span>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -185,7 +185,7 @@
                                                                     <span>중형 냉장고 (430L)&#215;3</span>
                                                                     <span>하단 상온장</span>
                                                                 </div>
-                                                                <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                                <span class="more_info_btn product_info_btn4">판매/렌탈 가격 보기</span>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -249,7 +249,7 @@
                                                                 </dl>
                                                                 <span>KIOSK (10inch), 소형 냉장 쇼케이스 (430L), 상온장 (철체)</span>
                                                             </div>
-                                                            <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn3">판매/렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -269,7 +269,7 @@
                                                                 </dl>
                                                                 <span>KIOSK (10inch), 중형 냉장고 (430L), 상온장 (제작)</span>
                                                             </div>
-                                                            <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn4">판매/렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -343,7 +343,7 @@
                                                                     <dd>상하 E/L 방식</dd>
                                                                 </dl>
                                                             </div>
-                                                            <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn3">판매/렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -374,7 +374,7 @@
                                                                     <dd>상하 E/L 방식</dd>
                                                                 </dl>
                                                             </div>
-                                                            <span class="more_info_btn">판매/렌탈 가격 보기</span>
+                                                            <span class="more_info_btn product_info_btn4">판매/렌탈 가격 보기</span>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -407,6 +407,15 @@
 
                         let sectST2 = $('.sect2').offset().top;
                         $('html').stop().animate({'scrollTop': sectST2}, 300)
+                    });
+
+                    $('.product_info_btn3').on('click', function(){
+                        $('#popup_area').load('../includes/sub5_3_3.html');
+                        $('html, body').addClass('hidden');
+                    });
+                    $('.product_info_btn4').on('click', function(){
+                        $('#popup_area').load('../includes/sub5_3_4.html');
+                        $('html, body').addClass('hidden');
                     });
                 </script>
                 <section class="sect3">

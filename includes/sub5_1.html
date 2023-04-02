@@ -17,7 +17,6 @@
     <script src="../js/popup_script.js"></script>
 </head>
 <body>
-<!-- 인증번호 빈 값일 때 확인 누르고 다시 작성>시간 안 감 // 리스트 누른 대로 회사명/호텔등 바뀌게 해야함 -->
     <div id="service_inquiry_main1" class="popup inquiry_popup on">
         <div class="popup_inner">
             <div class="popup_top">
@@ -78,16 +77,16 @@
                     <div class="popup_content_desc">
                         <h5 class="inquiry_essential_item">서비스가 필요한 공간을 선택해 주세요!</h5>
                         <ul class="inquiry_btn_wrap single_choice">
-                            <li class="inquiry_btn1 checked">
+                            <li class="inquiry_btn1 checked" data-area="회사명">
                                 <span>오피스</span>
                             </li>
-                            <li class="inquiry_btn1">
+                            <li class="inquiry_btn1" data-area="호텔명">
                                 <span>호텔</span>
                             </li>
-                            <li class="inquiry_btn1">
+                            <li class="inquiry_btn1" data-area="시설 종류">
                                 <span>스포츠시설</span>
                             </li>
-                            <li class="inquiry_btn1">
+                            <li class="inquiry_btn1" data-area="기타">
                                 <span>기타</span>
                             </li>
                         </ul>
@@ -159,7 +158,7 @@
                 </div>
                 <div class="popup_btm">
                     <div class="popup_btn">
-                        <input type="button" class="btn submit_btn" value="신청하기" disabled>
+                        <input type="button" class="btn submit_btn submit_btn1" value="신청하기" disabled>
                     </div>
                 </div>
             </div>
@@ -467,9 +466,9 @@
                         <div class="inquiry_question">
                             <div class="range_intro">
                                 <p>스낵바 이용자가 간식 가격의 얼만큼의 비율을 부담 하시길 원하시나요? </p>
-                                <span>구독형의 경우, 공간측에서 최소 10%의 간식 가격을 부담하게되요.</span>
+                                <span>구독형의 경우, 공간측에서 최소 10%의 간식 가격을 부담하게 돼요.</span>
                             </div>
-                            <h6 class="progress_value_area">지원 비율 <i><span id="range_value4">100</span> : <span class="value2">0</span></i></h6>
+                            <h6 class="progress_value_area">지원 비율 <i><span id="range_value4">100</span> : <span id="range_value5">0</span></i></h6>
                             <div class="input_range_area input_range_area4">
                                 <div class="range_info">
                                     <span>공간측</span>
@@ -495,22 +494,29 @@
                                     </div>
                                 </div>
                             </div>
-                                <script>
-                                    $('#range_bar4').on('change input', function(){
-                                        let currBar4Val = $(this).val();
-                                        if(currBar4Val == '0'){
-                                            $('#range_value4').text("5");
-                                        }else{
-                                            $('#range_value4').text(currBar4Val);
-                                        }
-                                        $('.range_box_wrap4 .range_value_background').css({'width': currBar4Val + '%'});
-                                    })
-                                </script>
                             <div class="bubble_area">
                                 <div class="bubble_item">
                                     <h6>이용자들은 간식을 <span>무료</span>로 먹을 수 있어요!</h6>
                                 </div>
                             </div>
+                                <script>
+                                    $('#range_bar4').on('change input', function(){
+                                        let currBar4Val = $(this).val();
+                                        if(currBar4Val == '0'){
+                                            currBar4Val = 10
+                                        }else{
+                                            $('#range_value4').text(currBar4Val);
+                                            $('#range_value5').text(100 - currBar4Val);
+                                        }
+                                        $('.range_box_wrap4 .range_value_background').css({'width': currBar4Val + '%'});
+                                        if(currBar4Val == 100){
+                                            $('.bubble_area .bubble_item').html("<h6>이용자들은 간식을 <span>무료</span>로 먹을 수 있어요!</h6>");
+
+                                        }else{
+                                            $('.bubble_area .bubble_item').html("<h6>이용자들은 간식을 <span>" + currBar4Val + "%</span> 할인된 가격으로 먹을 수 있어요!</h6>");
+                                        }
+                                    })
+                                </script>
                         </div>
                     </div>
                 </div>
@@ -537,7 +543,7 @@
                         <div class="popup_summary">
                             <h6>
                                 <b>고객님의 정보를 기반으로 제품을 추천해드릴게요!</b>
-                                <i>정보수정</i>
+                                <i class="edit_btn1">정보수정</i>
                             </h6>
                             <ul>
                                 <li class="summary_list1"><span></span>오피스</li>
@@ -709,7 +715,7 @@
                         <div class="popup_summary">
                             <h6>
                                 <b>고객님의 정보를 기반으로 제품을 추천해드릴게요!</b>
-                                <i>정보수정</i>
+                                <i class="edit_btn1">정보수정</i>
                             </h6>
                             <ul>
                                 <li class="summary_list1"><span></span>오피스</li>
@@ -836,7 +842,7 @@
                                         </div>
                                     </li>
                                 </ol>
-                                <button type="button" class="btn btn_wh">계약기간 적용</button>
+                                <button type="button" class="btn btn_wh apply_btn">계약기간 적용</button>
                             </div>
                         </div>
                     </div>
@@ -845,7 +851,7 @@
                     <div class="popup_content_desc">
                         <h4>
                             <b>예상 견적</b>
-                            <i>계약기간<span>12개월</span></i>
+                            <i>계약기간<span id="radio_val1">12개월</span></i>
                         </h4>
                         <div class="quotation_area">
                             <div class="quotation_category">
@@ -889,6 +895,14 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    $('#service_inquiry2_4 .radio_box_wrap').click(function(){
+                        let radio_val = $(this).find('label').text();
+                        $('.apply_btn').click(function(){
+                            $("#radio_val1").text(radio_val)
+                        })
+                    })
+                </script>
                 <div class="popup_btm">
                     <div class="popup_btn">
                         <input type="button" class="btn btn_wh prev_btn" value="이전단계">
@@ -931,21 +945,22 @@
                             </li>
                             <li class="inquiry_btn2">
                                 <div class="img_box">
-                                    <img src="../images/inquiry/inquiry_img10.svg" alt="커피 정기구독">
+                                    <img src="../images/inquiry/inquiry_img19.svg" alt="냉장주류">
                                 </div>
-                                <span>커피 정기구독</span>
+                                <span>냉장 주류</span>
+                            </li>
+                            
+                            <li class="inquiry_btn2">
+                                <div class="img_box">
+                                    <img src="../images/inquiry/inquiry_img18.svg" alt="호텔용품">
+                                </div>
+                                <span>호텔 용품</span>
                             </li>
                             <li class="inquiry_btn2">
                                 <div class="img_box">
                                     <img src="../images/inquiry/inquiry_img11.svg" alt="사무용품/소모품">
                                 </div>
                                 <span>사무용품/소모품</span>
-                            </li>
-                            <li class="inquiry_btn2">
-                                <div class="img_box">
-                                    <img src="../images/inquiry/inquiry_img12.svg" alt="회사 굿즈/선물">
-                                </div>
-                                <span>회사 굿즈/선물</span>
                             </li>
                         </ul>
                         <div class="inquiry_question">
@@ -1006,7 +1021,7 @@
                         <div class="popup_summary">
                             <h6>
                                 <b>고객님의 정보를 기반으로 제품을 추천해드릴게요!</b>
-                                <i>정보수정</i>
+                                <i class="edit_btn2">정보수정</i>
                             </h6>
                             <ul>
                                 <li class="summary_list1"><span></span>오피스</li>
@@ -1131,7 +1146,7 @@
                                         </div>
                                     </li>
                                 </ol>
-                                <button type="button" class="btn btn_wh">계약기간 적용</button>
+                                <button type="button" class="btn btn_wh apply_btn">계약기간 적용</button>
                             </div>
                         </div>
                     </div>
@@ -1140,7 +1155,7 @@
                     <div class="popup_content_desc">
                         <h4>
                             <b>예상 견적</b>
-                            <i>계약기간<span>12개월</span></i>
+                            <i>계약기간<span id="radio_val2">일시 구매</span></i>
                         </h4>
                         <div class="quotation_area">
                             <div class="quotation_category">
@@ -1164,6 +1179,12 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    $('#service_inquiry4_3 .radio_box_wrap').click(function(){
+                        let radio_val = $(this).find('label').text();
+                        $("#radio_val2").text(radio_val)
+                    })
+                </script>
                 <div class="popup_btm">
                     <div class="popup_btn">
                         <input type="button" class="btn btn_wh prev_btn" value="이전단계">
@@ -1186,7 +1207,7 @@
                         <div class="popup_summary">
                             <h6>
                                 <b>고객님의 정보를 기반으로 제품을 추천해드릴게요!</b>
-                                <i>정보수정</i>
+                                <i class="edit_btn2">정보수정</i>
                             </h6>
                             <ul>
                                 <li class="summary_list1"><span></span>오피스</li>
@@ -1269,7 +1290,7 @@
                         </div>
                         <div class="inquiry_question inquiry_question5">
                             <h5 class="inquiry_essential_item">상담요청</h5>
-                            <ol>
+                            <ol id="option_select_btn">
                                 <li class="radio_box_wrap checked">
                                     <input type="radio" id="radio11" name="radio_list6" checked>
                                     <label for="radio11">상담이 필요해요.</label>
@@ -1305,7 +1326,7 @@
                 </div>
                 <div class="popup_btm">
                     <div class="popup_btn">
-                        <input type="button" class="btn submit_btn" value="신청하기" disabled>
+                        <input type="button" class="btn submit_btn submit_btn2" value="신청하기" disabled>
                     </div>
                 </div>
             </div>
@@ -1338,6 +1359,19 @@
             </div>
         </div>
     </div>
+    <div id="inquiry_alert_popup2_1" class="inquiry_alert_popup">
+        <div class="popup_inner">
+            <div class="popup_content_area">
+                <h3 class="main_sentence">입력하신 정보로 상담 신청을 완료하시겠습니까?</h3>
+            </div>
+            <div class="popup_btm">
+                <div class="popup_btn">
+                    <input type="button" class="btn btn_wh cancel_btn" value="취소">
+                    <input type="button" class="btn confirm_btn" value="확인">
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="inquiry_alert_popup3" class="inquiry_alert_popup">
         <div class="popup_inner">
             <div class="popup_content_area">
@@ -1357,6 +1391,39 @@
                     <img src="../images/inquiry/inquiry_img4.svg" alt="서비스 소개서">
                 </div>
                 <p class="popup_desc">입력하신 이메일로 <span>서비스 소개서</span>를 보내드렸으며, <b>상담사가 순차적으로 연락드릴 예정입니다.</b></p>
+                <i>(평균 1일 ~ 2일 소요 예정)</i>
+            </div>
+            <div class="popup_btm">
+                <div class="popup_btn">
+                    <input type="button" class="btn confirm_btn" value="확인">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="inquiry_alert_popup5_1" class="inquiry_alert_popup">
+        <div class="popup_inner">
+            <div class="popup_content_area">
+                <div class="img_box">
+                    <img src="../images/inquiry/inquiry_img4.svg" alt="간편 견적서">
+                </div>
+                <p class="popup_desc">입력하신 이메일로 <span>간편 견적서</span>를 보내드렸습니다. <b>상담 필요시, 무료 상담신청을 요청해주세요!</b></p>
+                <i>(서비스 문의 > 무료 상담 신청)</i>
+            </div>
+            <div class="popup_btm">
+                <div class="popup_btn">
+                    <input type="button" class="btn confirm_btn" value="확인">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="inquiry_alert_popup5_2" class="inquiry_alert_popup">
+        <div class="popup_inner">
+            <div class="popup_content_area">
+                <div class="img_box">
+                    <img src="../images/inquiry/inquiry_img4.svg" alt="간편 견적서">
+                </div>
+                <p class="popup_desc">입력하신 이메일로 <span>간편 견적서</span>를 보내드렸으며, <b>상담사가 순차적으로 연락드릴 예정입니다.</b></p>
                 <i>(평균 1일 ~ 2일 소요 예정)</i>
             </div>
             <div class="popup_btm">

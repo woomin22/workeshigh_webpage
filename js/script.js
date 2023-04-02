@@ -68,20 +68,16 @@ $(document).ready(function() {
     });
 
     $('.close_btn').click(function(){
+        
         $('.popup').removeClass('on');
         $('.popup_dim').removeClass('on');
+        $('html, body').removeClass('hidden');
     });
 
     $('.service_request_btn').click(function(){
         $('#popup_area').load('../includes/sub5_1.html');
+        $('html, body').addClass('hidden');
     })
-    $('.product_info_btn1').on('click', function(){
-        $('#popup_area').load('../includes/sub5_3_1.html');
-    });
-    $('.product_info_btn2').on('click', function(){
-        $('#popup_area').load('../includes/sub5_3_2.html');
-    });
-    $('.product_info_btn3').on('click', function(){
-        $('#popup_area').load('../includes/sub5_3_3.html');
-    });
+
+    
 });

@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 .popup .popup_content_area {
-  height: calc(100vh - 220px);
+  max-height: calc(100vh - 220px);
   overflow: scroll;
 }
 .popup .popup_content_wrap {
@@ -115,6 +115,13 @@
 }
 .popup .popup_content_wrap .popup_content1 .popup_content_desc .txt_box dl dd {
   width: calc(100% - 90px);
+  font-size: 20px;
+  line-height: 1.45;
+}
+.popup .popup_content_wrap .popup_content1 .popup_content_desc .txt_box strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.45;
 }
@@ -255,7 +262,7 @@
   font-weight: 700;
 }
 
-#popup_ver1 .popup_content_wrap .popup_content3 .popup_content_desc ul li {
+#popup_ver1 .popup_content_wrap .popup_content3 .popup_content_desc ul li, #popup_ver4 .popup_content_wrap .popup_content3 .popup_content_desc ul li {
   width: 23.37%;
 }
 

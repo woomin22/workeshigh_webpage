@@ -60,7 +60,7 @@
         }
     }
     .popup_content_area{
-        height: calc(100vh - 220px);
+        max-height: calc(100vh - 220px);
         overflow: scroll;
     }
     .popup_content_wrap{
@@ -112,6 +112,13 @@
                             font-size: 20px;
                             line-height: 1.45;
                         }
+                    }
+                    strong{
+                        display: block;
+                        margin-bottom: 6px;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 1.45;
                     }
                 }
             }
@@ -258,7 +265,7 @@
     }
 }
 
-#popup_ver1{
+#popup_ver1, #popup_ver4{
     .popup_content_wrap .popup_content3{
         .popup_content_desc ul{
             li{
