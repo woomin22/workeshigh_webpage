@@ -235,6 +235,7 @@
 }
 
 .progress_value_area {
+  height: 50px;
   padding: 10px 20px;
   font-weight: 500;
   font-size: 20px;
@@ -250,6 +251,9 @@
 }
 .progress_value_area i span {
   font-family: "Poppins", sans-serif;
+}
+.progress_value_area.progress_value_area2 {
+  display: none;
 }
 
 .privacy_policy_area h5 {
@@ -1258,6 +1262,7 @@
     line-height: 19px;
   }
   .progress_value_area {
+    height: 36px;
     padding: 8px 16px;
     font-size: 13px;
     line-height: 20px;

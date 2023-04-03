@@ -785,6 +785,10 @@ input[type='text']:focus{
                 }
             }
         }
+
+        &.disabled{
+            filter: grayscale(100);
+        }
     }
     .range_box_wrap3 .range_full_background .range_dot_wrap li{
         &:nth-child(1):after{content: "50";}
@@ -847,6 +851,7 @@ input[type='text']:focus{
             line-height: 26px;
         }
     }
+
 }
 
 .fade_animation1{
@@ -881,6 +886,12 @@ input[type='text']:focus{
     }
     .mobile{
         display: block !important;
+    }
+
+    @supports (-webkit-touch-callout: none) { 
+        body{
+            height: -webkit-fill-available;
+        }
     }
 
     header{

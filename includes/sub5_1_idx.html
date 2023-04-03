@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
     <title>워커스하이</title>
 
@@ -297,8 +297,9 @@
                         <div class="inquiry_question inquiry_question2">
                             <div>
                                 <p>· 주요 연령대는요?</p>
-                                <h6 class="progress_value_area">연령대 <i><span id="range_value1">20~</span><span id="range_value2">40</span>대</i></h6>
-                                <div class="check_box_wrap">
+                                <h6 class="progress_value_area progress_value_area1">연령대 <i><span id="range_value1">20~</span><span id="range_value2">40</span>대</i></h6>
+                                <h6 class="progress_value_area progress_value_area2">그때그때 달라요!</h6>
+                                <div class="check_box_wrap" id="age_check">
                                     <input type="checkbox" id="check2">
                                     <label for="check2">그때그때 달라요!</label>
                                 </div>
@@ -340,6 +341,22 @@
                                     $('.range_box_wrap1 .range_value_background').css({'width': 20*calcVal + '%'});
                                     
                                 });
+
+                                $('#age_check').click(function(){
+                                    let age_check = $(this).find('input:checkbox').is(':checked');
+                                    if(age_check !== true){
+                                        $('.progress_value_area2').hide();
+                                        $('.progress_value_area1').show();
+                                        $('.input_range_area1 .range_box_wrap1 input').attr('disabled', false);
+                                        $('.input_range_area1 .range_box_wrap1').removeClass('disabled')
+                                    }else{
+                                        $('.progress_value_area1').hide();
+                                        $('.progress_value_area2').show();
+                                        $('.input_range_area1 .range_box_wrap1 input').attr('disabled', true);
+                                        $('.input_range_area1 .range_box_wrap1').addClass('disabled')
+
+                                    }
+                                })
                             </script>
                         </div>
                     </div>
