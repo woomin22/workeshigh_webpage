@@ -363,8 +363,10 @@
 }
 
 @media screen and (max-width: 1024px){
-    body{
-        height: -webkit-fill-available;
+    @supports (-webkit-touch-callout: none) { 
+        body{
+            height: -webkit-fill-available;
+        }
     }
 
     .popup{
