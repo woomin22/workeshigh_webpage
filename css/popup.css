@@ -56,7 +56,7 @@
   font-size: 26px;
   line-height: 39px;
 }
-.popup .popup_top .close_btn {
+.popup .popup_top .close_btn, .popup .popup_top .close_btn_in_popup {
   width: 40px;
   height: 40px;
   background: url("../images/icon/icon-close.svg") no-repeat center/contain;
@@ -338,7 +338,10 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  body {
+    height: -webkit-fill-available;
+  }
   .popup {
     top: 0;
   }
@@ -350,7 +353,7 @@
     font-size: 16px;
     line-height: 23px;
   }
-  .popup .popup_top .close_btn {
+  .popup .popup_top .close_btn, .popup .popup_top .close_btn_in_popup {
     width: 30px;
     height: 30px;
   }
@@ -389,6 +392,7 @@
     color: #8b8b8b;
     font-size: 16px;
     line-height: 23px;
+    letter-spacing: -0.045em;
   }
   .popup .popup_content_wrap .popup_content1 .popup_content_desc .txt_box dl dt .essential_item {
     font-size: 16px;
@@ -398,6 +402,10 @@
     width: calc(100% - 64px);
     font-size: 16px;
     line-height: 22px;
+  }
+  .popup .popup_content_wrap .popup_content1 .popup_content_desc .txt_box strong {
+    margin-bottom: 4px;
+    font-size: 15px;
   }
   .popup .popup_content_wrap .popup_content2 {
     height: 160px;
@@ -507,6 +515,9 @@
     width: 146px;
   }
   #popup_ver3 .popup_content_wrap .popup_content3 .popup_content_desc ul li {
+    width: 100%;
+  }
+  #popup_ver4 .popup_content_wrap .popup_content3 .popup_content_desc ul li {
     width: 100%;
   }
   .inquiry_alert_popup {

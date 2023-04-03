@@ -18,15 +18,23 @@ $(document).ready(function() {
     });
     
     $('.radio_list').click(function(){
+        let soldOut_check = $(this).hasClass('sold_out');
+
         let checkde_radio2 = $(this).find('input:radio').is(':checked');
-        if(checkde_radio2 !== true){
-            $(this).closest('.radio_list_wrap').find('.radio_list').removeClass('checked');
-            $(this).addClass('checked');
-            $(this).closest('.radio_list_wrap').find('.radio_box_wrap').removeClass('checked');
-            $(this).find('.radio_box_wrap').addClass('checked');
-            $(this).closest('.radio_list_wrap').find('input:radio').attr('checked', false);
-            $(this).find('input:radio').attr('checked', true)
-        };
+        if(soldOut_check !== true){
+            if(checkde_radio2 !== true){
+                $(this).closest('.radio_list_wrap').find('.radio_list').removeClass('checked');
+                $(this).addClass('checked');
+                $(this).closest('.radio_list_wrap').find('.radio_box_wrap').removeClass('checked');
+                $(this).find('.radio_box_wrap').addClass('checked');
+                $(this).closest('.radio_list_wrap').find('input:radio').attr('checked', false);
+                $(this).find('input:radio').attr('checked', true)
+            }else{
+                $(this).closest('.radio_list_wrap').find('.radio_list').removeClass('checked');
+                $(this).closest('.radio_list_wrap').find('.radio_box_wrap').removeClass('checked');
+                $(this).closest('.radio_list_wrap').find('input:radio').attr('checked', false);
+            }
+        }
     });
     $('ol .radio_box_wrap').click(function(){
         let checkde_radio1 = $(this).find('input:radio').is(':checked');
@@ -67,8 +75,7 @@ $(document).ready(function() {
         $(this).toggleClass('checked');
     });
 
-    $('.close_btn').click(function(){
-        
+    $('.close_btn').click(function(){       
         $('.popup').removeClass('on');
         $('.popup_dim').removeClass('on');
         $('html, body').removeClass('hidden');

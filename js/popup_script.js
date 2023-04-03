@@ -209,7 +209,7 @@ $('#inquiry_alert_popup2_1 .confirm_btn').on('click', function () {
     $('.alert_dim').addClass('on');
 
     let option_has = $('#option_select_btn li').eq(0).hasClass('checked');
-    if(option_has !== true){
+    if(option_has !== false){
         $('.inquiry_popup').removeClass('on');
         $('#inquiry_alert_popup2').removeClass('on');
         $('#inquiry_alert_popup5_2').addClass('on');

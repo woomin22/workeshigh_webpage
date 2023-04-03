@@ -1,3 +1,5 @@
+
+
 .mobile{
     display: none !important;
 }
@@ -1098,8 +1100,11 @@ input[type='text']:focus{
             width: 90%;
             height: 20px;
             input[type=range]::-webkit-slider-thumb{
-                width: 18px;
-                height: 18px;
+                // width: 18px;
+                // height: 18px;
+                width: 23px;
+                height: 23px;
+                padding: 5px;
                 border-width: 3px;
             }
             .range_full_background{
@@ -1129,10 +1134,7 @@ input[type='text']:focus{
             &:nth-child(6):after{content: "";}
             &:nth-child(8):after{content: "";}
             &:nth-child(10):after{content: "";}
-            &:nth-child(11):after{
-                content: "1,000 이상";
-                text-align: right;
-            }
+
         }
         &.input_range_area3 .range_info{
             font-size: 12px;
