@@ -634,7 +634,7 @@
 }
 /* ---------- tablet & mobile ---------- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .sect1{
         padding: 106px 0 0;
         h2{
@@ -890,8 +890,7 @@
                 .service_list ul>li{
                     width: 100%;
                     .img_box img{
-                        width: auto;
-                        height: 140%;
+                        width: 140%;
                     }
                 }
             }

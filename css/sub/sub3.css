@@ -267,7 +267,7 @@
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #sub3_1 {
     padding-top: 106px;
   }
@@ -300,9 +300,9 @@
     height: 270px;
     margin-bottom: 16px;
   }
-  #sub3_1 .sect1 .cont_list ul li:first-child .img_box img {
+  #sub3_1 .sect1 .cont_list ul li:not(.no_img_box) img {
     top: 20%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -20%) scale(1);
     width: 100%;
     height: auto;
   }

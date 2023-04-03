@@ -356,6 +356,7 @@
   }
   .popup .popup_content_area {
     height: calc(100vh - 56px);
+    max-height: calc(100vh - 56px);
   }
   .popup .popup_content_wrap {
     width: 88.889%;

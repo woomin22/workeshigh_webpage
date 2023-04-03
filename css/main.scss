@@ -628,7 +628,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #main{
         .section_inner{
             padding: 50px 0 25px;
@@ -652,7 +652,7 @@
                     width: 88.889%;
                     height: 415px;
                     border-radius: 20px 20px 0px 0px;
-                    background-size: auto 120%;
+                    background-size: auto 125%;
                     background-position: 67.498% 10%;
                 }
             }
@@ -673,8 +673,10 @@
                         .swiper-slide{
                             width: 77.778% !important;
                             .img_box img{
+                                top: 30%;
+                                transform: translate(-50%, -30%);
                                 width: auto;
-                                height: 120%;
+                                height: 150%;
                             }
                         }
                     }
@@ -803,8 +805,10 @@
                             width: 77.778% !important;
                             height: 320px;
                             .img_box img{
+                                top: 30%;
+                                transform: translate(-50%, -30%);
                                 width: auto;
-                                height: 120%;
+                                height: 150%;
                             }
                             .slide_desc b{
                                 display: inline;

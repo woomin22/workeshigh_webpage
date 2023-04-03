@@ -567,7 +567,7 @@
   }
 }
 /* ---------- tablet & mobile ---------- */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .sect1 {
     padding: 106px 0 0;
   }
@@ -805,8 +805,7 @@
     width: 100%;
   }
   #sub2_1 .sect2 .content1 .content_inner > div:nth-child(2) .service_list ul > li .img_box img {
-    width: auto;
-    height: 140%;
+    width: 140%;
   }
   #sub2_1 .sect3 .aside_area .img_box {
     width: 84.722%;

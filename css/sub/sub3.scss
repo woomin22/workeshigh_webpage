@@ -296,7 +296,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #sub3_1{
         padding-top: 106px;
         .sect1{
@@ -324,13 +324,11 @@
                             height: 270px;
                             margin-bottom: 16px;
                         }
-                        &:first-child{
-                            .img_box img{
-                                top: 20%;
-                                transform: translate(-50%, -20%);
-                                width: 100%;
-                                height: auto;
-                            }
+                        &:not(.no_img_box) img{
+                            top: 20%;
+                            transform: translate(-50%, -20%) scale(1);
+                            width: 100%;
+                            height: auto;
                         }
 
                         .detail_info{
