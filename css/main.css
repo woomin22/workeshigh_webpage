@@ -937,6 +937,7 @@
   }
   #main .sect2 .sect2_slide .swiper-slide4 .slide_cont_area {
     width: 88.889%;
+    max-width: 500px;
   }
   #main .sect3 .sect3_slide .swiper-slide1 .slide_cont .sect3_cont_slide1 .swiper-slide {
     width: 280px !important;
