@@ -591,19 +591,23 @@
   font-weight: 700;
   line-height: 30px;
 }
+.radio_list_wrap li.radio_list .img_box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+}
 .radio_list_wrap li.radio_list.checked .img_box {
   border-color: #4267EB;
 }
 .radio_list_wrap li.radio_list.sold_out .img_box:after {
   content: "재고없음";
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   font-size: 28px;
   font-weight: 500;
   color: #fff;
@@ -1120,6 +1124,11 @@
   width: 100%;
   height: 12px;
   background: rgba(66, 103, 235, 0.12);
+}
+
+.popup2 {
+  z-index: 150;
+  max-width: 964px;
 }
 
 @media screen and (max-width: 1024px) {

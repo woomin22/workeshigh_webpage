@@ -8,6 +8,8 @@
         }
     }
     .sect1{
+        width: 100%;
+        overflow: hidden;
         .section_inner{
             position: relative;
             height: 930px;
@@ -1043,7 +1045,7 @@
             background: #fff;
             .header_inner{
                 h1.logo a{
-                    background-image: url('../images/logo_bk.svg');
+                    background-image: url('../images/logo_mo_bk.svg');
                 }
             }
             .gnb_area ol{

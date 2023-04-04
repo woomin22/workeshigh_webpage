@@ -241,6 +241,10 @@ footer .mobile .footer_bottom .contact_area ul li:first-child {
   margin-bottom: 0;
 }
 
+main {
+  min-height: calc(100vh - 250px);
+}
+
 .section_inner {
   max-width: 1920px;
   margin: auto;
@@ -958,6 +962,9 @@ input[type=text]:focus {
     width: 30px;
     height: 30px;
     background: url("../images/icon/icon-menu-bl.svg") no-repeat center/contain;
+  }
+  main {
+    min-height: calc(100vh - 352px);
   }
   .section_inner h3.cont_title {
     font-size: 24px;

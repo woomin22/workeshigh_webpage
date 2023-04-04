@@ -17,9 +17,8 @@ $(document).ready(function() {
         $(this).closest('.select_wrap').toggleClass('active');
     });
     
-    $('.radio_list').click(function(){
+    $('.radio_list_wrap .radio_list').click(function(){
         let soldOut_check = $(this).hasClass('sold_out');
-
         let checkde_radio2 = $(this).find('input:radio').is(':checked');
         if(soldOut_check !== true){
             if(checkde_radio2 !== true){

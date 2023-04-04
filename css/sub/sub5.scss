@@ -632,6 +632,16 @@
                     line-height: 30px;
                 }
             }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0);
+            }
         }
         &.checked .img_box{
             border-color: #4267EB;
@@ -639,14 +649,10 @@
         &.sold_out{
             .img_box:after{
                 content: "재고없음";
-                position: absolute;
-                top: 0;
-                left: 0;
+                
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
-                height: 100%;
                 font-size: 28px;
                 font-weight: 500;
                 color: #fff;
@@ -1211,6 +1217,11 @@
            }
         }
     }
+}
+
+.popup2{
+    z-index: 150;
+    max-width: 964px;
 }
 
 

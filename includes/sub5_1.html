@@ -298,7 +298,7 @@
                             <div>
                                 <p>· 주요 연령대는요?</p>
                                 <h6 class="progress_value_area progress_value_area1">연령대 <i><span id="range_value1">20~</span><span id="range_value2">40</span>대</i></h6>
-                                <h6 class="progress_value_area progress_value_area2">그때그때 달라요!</h6>
+                                <h6 class="progress_value_area progress_value_area2"><i>그때그때 달라요!</i></h6>
                                 <div class="check_box_wrap" id="age_check">
                                     <input type="checkbox" id="check2">
                                     <label for="check2">그때그때 달라요!</label>
@@ -1453,7 +1453,7 @@
         </div>
     </div>
 
-    <div id="popup_ver1" class="popup">
+    <div id="popup_ver1" class="popup popup2">
         <div class="popup_inner">
             <div class="popup_top">
                 <div class="null"></div>
@@ -1517,17 +1517,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="popup_btm">
-                    <h5 class="popup_btm_desc">렌탈 서비스에 대해 궁금한게 있으시면 문의해주세요!</h5>
-                    <div class="popup_btn">
-                        <input type="button" class="btn" value="1:1 문의하기">
-                        <input type="button" class="btn btn_wh service_request_btn" value="견적/상담 요청">
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <div id="popup_ver2" class="popup">
+    <div id="popup_ver2" class="popup popup2">
         <div class="popup_inner">
             <div class="popup_top">
                 <div class="null"></div>
@@ -1591,17 +1584,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="popup_btm">
-                    <h5 class="popup_btm_desc">렌탈 서비스에 대해 궁금한게 있으시면 문의해주세요!</h5>
-                    <div class="popup_btn">
-                        <input type="button" class="btn" value="1:1 문의하기">
-                        <input type="button" class="btn btn_wh service_request_btn" value="견적/상담 요청">
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <div id="popup_ver3" class="popup">
+    <div id="popup_ver3" class="popup popup2">
         <div class="popup_inner">
             <div class="popup_top">
                 <div class="null"></div>
@@ -1672,17 +1658,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="popup_btm">
-                    <h5 class="popup_btm_desc">렌탈 서비스에 대해 궁금한게 있으시면 문의해주세요!</h5>
-                    <div class="popup_btn">
-                        <input type="button" class="btn" value="1:1 문의하기">
-                        <input type="button" class="btn btn_wh service_request_btn" value="견적/상담 요청">
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <div id="popup_ver4" class="popup">
+    <div id="popup_ver4" class="popup popup2">
         <div class="popup_inner">
             <div class="popup_top">
                 <div class="null"></div>
@@ -1749,13 +1728,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="popup_btm">
-                    <h5 class="popup_btm_desc">렌탈 서비스에 대해 궁금한게 있으시면 문의해주세요!</h5>
-                    <div class="popup_btn">
-                        <input type="button" class="btn" value="1:1 문의하기">
-                        <input type="button" class="btn btn_wh service_request_btn" value="견적/상담 요청">
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -1771,18 +1743,23 @@
 
         $('.close_btn_in_popup').on('click', function(){
             $(this).closest('.popup').removeClass('on');
+            $('.alert_dim').removeClass('on');
         });
         $('.product_info_in_popup1').on('click', function(){
             $('#popup_ver1').addClass('on');
+            $('.alert_dim').addClass('on');
         });
         $('.product_info_in_popup2').on('click', function(){
             $('#popup_ver2').addClass('on');
+            $('.alert_dim').addClass('on');
         });
         $('.product_info_in_popup3').on('click', function(){
             $('#popup_ver3').addClass('on');
+            $('.alert_dim').addClass('on');
         });
         $('.product_info_in_popup4').on('click', function(){
             $('#popup_ver4').addClass('on');
+            $('.alert_dim').addClass('on');
         });
     </script>
 </body>

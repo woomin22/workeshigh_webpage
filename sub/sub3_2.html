@@ -47,12 +47,27 @@
                                     </h3>
                                     <div class="icon_btn_wrap">
                                         <ul>
-                                            <li class="icon_btn link_copy_btn"></li>
+                                            <li class="icon_btn link_copy_btn" id="link_copy_btn"></li>
                                             <li class="icon_btn kakaotalk_btn"></li>
                                             <li class="icon_btn map_btn"></li>
                                         </ul>
                                     </div>
                                 </div>
+                                <script>
+                                    function copyClip(url){
+                                        var $temp = $('<input>');
+                                        $('body').append($temp);
+                                        $temp.val(url).select();
+                                        document.execCommand('copy');
+                                        $temp.remove();
+                                        alert('URL이 복사되었습니다.');
+                                    }
+                                    $('#link_copy_btn').on('click', function(e){
+                                        e.preventDefault();
+                                        var link = location.href;
+                                        copyClip(link);
+                                    });
+                                </script>
                                 <div class="cont_summary">
                                     <ul>
                                         <li>

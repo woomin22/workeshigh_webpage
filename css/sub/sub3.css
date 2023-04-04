@@ -151,6 +151,7 @@
   width: 76px;
   height: 76px;
   background: url("../../images/icon/icon-link.svg") no-repeat center/contain;
+  cursor: pointer;
 }
 #sub3_2 .sect2 .content1 .cont_title .icon_btn_wrap ul .icon_btn.kakaotalk_btn {
   background-image: url("../../images/icon/icon-kakaotalk.svg");

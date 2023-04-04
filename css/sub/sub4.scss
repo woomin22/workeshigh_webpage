@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 #sub4{
+    
     .sect1{
         padding: 200px 0 100px;
         h2{
@@ -16,8 +17,6 @@
         .tab_content_wrap{
             max-width: 1260px;
             padding: 80px 10px 54px;
-            min-height: 640px;
-            height: calc(100vh - 732px);
             margin: auto;
             .content{
                 display: none;
@@ -110,6 +109,7 @@
 
 @media screen and (max-width: 1024px) {
     #sub4{
+        
         .sect1{
             padding: 106px 0 50px;
             h2{
@@ -121,7 +121,6 @@
             }
             .tab_content_wrap{
                 width: 88.889%;
-                min-height: 360px;
                 padding: 32px 0 0;
                 .content li{
                     padding: 0 4px;

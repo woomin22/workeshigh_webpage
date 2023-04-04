@@ -267,7 +267,9 @@ footer{
        }
     }
 }
-
+main{
+    min-height: calc(100vh - 250px);
+}
 .section_inner{
     max-width: 1920px;
     margin: auto;
@@ -977,6 +979,9 @@ input[type='text']:focus{
                 }
             }
         }
+    }
+    main{
+        min-height: calc(100vh - 352px);
     }
 
     .section_inner{

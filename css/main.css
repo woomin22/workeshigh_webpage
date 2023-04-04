@@ -5,6 +5,10 @@
 #main .section_inner .cont_list {
   margin-top: 15px;
 }
+#main .sect1 {
+  width: 100%;
+  overflow: hidden;
+}
 #main .sect1 .section_inner {
   position: relative;
   height: 930px;
@@ -897,7 +901,7 @@
     background: #fff;
   }
   #header_area.mainOn header .header_inner h1.logo a {
-    background-image: url("../images/logo_bk.svg");
+    background-image: url("../images/logo_mo_bk.svg");
   }
   #header_area.mainOn header .gnb_area ol a {
     color: #111;
