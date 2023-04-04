@@ -57,7 +57,7 @@
                                 <li>프리미엄 주류 자판기</li>
                             </ul>
                             <div class="tab_content_wrap">
-                                <div class="content content1 active">
+                                <div class="content content1 active" id="sect3_hash1">
                                     <div class="content_inner">
                                         <div>
                                             <div class="cont_title">
@@ -65,7 +65,7 @@
                                                     프리미엄 하우징
                                                     <p>공간의 목적에 맞게 커스터마이징 가능한 이용정책과 고급스러운 디자인의 하우징형 제품입니다.</p>
                                                 </h4>
-                                                <a href="/" class="btn btn_wh">도입사례 보러 가기</a>
+                                                <a href="./sub3_1.html" class="btn btn_wh">도입사례 보러 가기</a>
                                             </div>
                                         </div>
                                         <div class="cont_summary">
@@ -194,7 +194,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="content content2">
+                                <div class="content content2" id="sect3_hash2">
                                     <div class="content_inner">
                                         <div>
                                             <div class="cont_title">
@@ -202,7 +202,7 @@
                                                     프리미엄 쇼케이스
                                                     <p>공간 내 특정 다수가 자유로이 이용 할 수 있는 쇼케이스형 제품입니다.</p>
                                                 </h4>
-                                                <a href="/" class="btn btn_wh">도입사례 보러 가기</a>
+                                                <a href="./sub3_1.html" class="btn btn_wh">도입사례 보러 가기</a>
                                             </div>
                                         </div>
                                         <div class="cont_summary">
@@ -277,7 +277,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="content content3">
+                                <div class="content content3" id="sect3_hash3">
                                     <div class="content_inner">
                                         <div>
                                             <div class="cont_title">
@@ -285,7 +285,7 @@
                                                     프리미엄 주류 자판기
                                                     <p>고급스러운 인테리어에도 잘 어울리는 프리미엄 주류 자판기</p>
                                                 </h4>
-                                                <a href="/" class="btn btn_wh">도입사례 보러 가기</a>
+                                                <a href="./sub3_1.html" class="btn btn_wh">도입사례 보러 가기</a>
                                             </div>
                                         </div>
                                         <div class="cont_summary">
@@ -383,6 +383,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </section>
@@ -417,6 +418,32 @@
                         $('#popup_area').load('../includes/sub5_3_4.html');
                         $('html, body').addClass('hidden');
                     });
+
+                    if(location.hash == '#sect3_hash1'){
+                        $('.tab_list li').removeClass('active');
+                        $('.tab_list li').eq(0).addClass('active');
+                        $('.tab_content_wrap .content').removeClass('active');
+                        $('.tab_content_wrap .content1').addClass('active');
+                        let hash1_scrollTop = $('#sect3_hash1').offset().top;
+                        $('html').animate({scrollTop : hash1_scrollTop - 150}, 300);
+                        //window.location.href.split('#')[0]
+
+                    }else if(location.hash == '#sect3_hash2'){
+                        $('.tab_list li').removeClass('active');
+                        $('.tab_list li').eq(1).addClass('active');
+                        $('.tab_content_wrap .content').removeClass('active');
+                        $('.tab_content_wrap .content2').addClass('active');
+                        let hash2_scrollTop = $('#sect3_hash2').offset().top;
+                        $('html').animate({scrollTop : hash2_scrollTop - 150}, 300);
+
+                    }else if(location.hash == '#sect3_hash3'){
+                        $('.tab_list li').removeClass('active');
+                        $('.tab_list li').eq(2).addClass('active');
+                        $('.tab_content_wrap .content').removeClass('active');
+                        $('.tab_content_wrap .content3').addClass('active');
+                        let hash3_scrollTop = $('#sect3_hash3').offset().top;
+                        $('html').animate({scrollTop : hash3_scrollTop - 150}, 300);
+                    }
                 </script>
                 <section class="sect3">
                     <div class="section_inner">

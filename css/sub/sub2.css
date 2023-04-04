@@ -993,3 +993,18 @@
     padding: 0 0 50px;
   }
 }
+@media screen and (max-width: 390px) {
+  #sub2_2 .sect2 ul.tab_list {
+    padding: 0 10px;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow-x: scroll;
+  }
+  #sub2_2 .sect2 ul.tab_list::-webkit-scrollbar {
+    width: 0;
+  }
+  #sub2_2 .sect2 ul.tab_list::-webkit-scrollbar-thumb {
+    height: 0;
+    background: none;
+  }
+}

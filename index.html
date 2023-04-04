@@ -144,7 +144,7 @@
                                                                 <b>키오스크 관제 시스템</b>
                                                             </div>
                                                         </div>
-                                                        <div class="swiper-slide">
+                                                        <div class="swiper-slide swiper-slide1_3">
                                                             <div class="img_box"><img src="./images/main/main_slide1_3.png" alt="상품 큐레이션"></div>
                                                             <div class="slide_desc">
                                                                 <span>다양한 취향과 니즈에 맞춘</span>
@@ -318,7 +318,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>KIOSK</h5>
-                                                                <a class="more_info_btn" href="./sub/sub2_1.html">
+                                                                <a class="more_info_btn" href="./sub/sub2_1.html#sect2_hash1">
                                                                     더 알아보기
                                                                 </a>
                                                             </div>
@@ -329,7 +329,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>쇼케이스</h5>
-                                                                <a class="more_info_btn" href="./sub/sub2_1.html">
+                                                                <a class="more_info_btn" href="./sub/sub2_1.html#sect2_hash2">
                                                                     더 알아보기
                                                                 </a>
                                                             </div>
@@ -340,7 +340,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>진열대</h5>
-                                                                <a class="more_info_btn" href="./sub/sub2_1.html">
+                                                                <a class="more_info_btn" href="./sub/sub2_1.html#sect2_hash3">
                                                                     더 알아보기
                                                                 </a>
                                                             </div>
@@ -351,7 +351,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>하우징</h5>
-                                                                <a class="more_info_btn" href="./sub/sub2_1.html">
+                                                                <a class="more_info_btn" href="./sub/sub2_1.html#sect2_hash4">
                                                                     더 알아보기
                                                                 </a>
                                                             </div>
@@ -362,7 +362,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>냉장고</h5>
-                                                                <a class="more_info_btn" href="./sub/sub2_1.html">
+                                                                <a class="more_info_btn" href="./sub/sub2_1.html#sect2_hash5">
                                                                     더 알아보기
                                                                 </a>
                                                             </div>
@@ -373,7 +373,7 @@
                                                             </div>
                                                             <div class="txt_box">
                                                                 <h5>디스펜서</h5>
-                                                                <a class="more_info_btn" href="./sub/sub2_1.html">
+                                                                <a class="more_info_btn" href="./sub/sub2_1.html#sect2_hash6">
                                                                     더 알아보기
                                                                 </a>
                                                             </div>
@@ -442,15 +442,28 @@
                         coverflowEffect: {
                             rotate: 0,
                             detpth: 0,
-                            scale: .75,
+                            scale: 0.95,
                             slideShadows: false,
                         },
+                        spaceBetween: 20,
                         navigation: {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         },
                         pagination: {
                             el: ".swiper-pagination",
+                        },
+
+                        breakpoints: {
+                            1024: {
+                                spaceBetween: 0,
+                                coverflowEffect: {
+                                    rotate: 0,
+                                    detpth: 0,
+                                    scale: .75,
+                                    slideShadows: false,
+                                },
+                            },
                         },
 
                     });
@@ -512,13 +525,13 @@
                                                 </h4>
                                                 <div class="swiper sect3_cont_slide1 fade_animation2" data-aos="fade-up" data-aos-duration="500">
                                                     <div class="swiper-wrapper">
-                                                        <div class="swiper-slide">
+                                                        <div class="swiper-slide swiper-slide2_1">
                                                             <div class="img_box"><img src="./images/main/main_slide2_1.png" alt="프리미엄 매대"></div>
                                                             <div class="slide_desc">
                                                                 <span>호텔처럼 고급스러운 공간에도</span><b>잘 어울리는 감각적인 디자인</b>
                                                             </div>
                                                         </div>
-                                                        <div class="swiper-slide">
+                                                        <div class="swiper-slide swiper-slide2_2">
                                                             <div class="img_box"><img src="./images/main/main_slide2_2.png" alt="디자인"></div>
                                                             <div class="slide_desc">
                                                                 <span>트렌디하고 힙한 공간에도</span>
@@ -705,7 +718,7 @@
                                                                         </dl>
                                                                     </div>
                                                                 </div>
-                                                                <a class="more_info_btn" href="./sub/sub2_2.html">더 알아보기</a>
+                                                                <a class="more_info_btn" href="./sub/sub2_2.html#sect3_hash1">더 알아보기</a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
@@ -742,7 +755,7 @@
                                                                         </dl>
                                                                     </div>
                                                                 </div>
-                                                                <a class="more_info_btn" href="./sub/sub2_2.html">더 알아보기</a>
+                                                                <a class="more_info_btn" href="./sub/sub2_2.html#sect3_hash2">더 알아보기</a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
@@ -779,7 +792,7 @@
                                                                         </dl>
                                                                     </div>
                                                                 </div>
-                                                                <a class="more_info_btn" href="./sub/sub2_2.html">더 알아보기</a>
+                                                                <a class="more_info_btn" href="./sub/sub2_2.html#sect3_hash3">더 알아보기</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -828,15 +841,28 @@
                         coverflowEffect: {
                             rotate: 0,
                             detpth: 0,
-                            scale: .75,
+                            scale: 0.95,
                             slideShadows: false,
                         },
+                        spaceBetween: 20,
                         navigation: {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         },
                         pagination: {
                             el: ".swiper-pagination",
+                        },
+
+                        breakpoints: {
+                            1024: {
+                                spaceBetween: 0,
+                                coverflowEffect: {
+                                    rotate: 0,
+                                    detpth: 0,
+                                    scale: .75,
+                                    slideShadows: false,
+                                },
+                            },
                         },
 
                     });

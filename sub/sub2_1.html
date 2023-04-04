@@ -219,7 +219,7 @@
                                 </div>
                                 <div class="content content3">
                                     <div class="content_inner">
-                                        <div class="group_type group_type1">
+                                        <div class="group_type group_type1" id="sect2_hash1">
                                             <h4 class="cont_title">
                                                 KIOSK
                                             </h4>
@@ -282,7 +282,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="group_type group_type2">
+                                        <div class="group_type group_type2" id="sect2_hash2">
                                             <h4 class="cont_title">
                                                 쇼케이스
                                             </h4>
@@ -363,7 +363,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="group_type group_type2">
+                                        <div class="group_type group_type2" id="sect2_hash3">
                                             <h4 class="cont_title">
                                                 진열대
                                             </h4>
@@ -429,7 +429,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="group_type group_type1">
+                                        <div class="group_type group_type1" id="sect2_hash4">
                                             <h4 class="cont_title">
                                                 하우징
                                             </h4>
@@ -486,7 +486,7 @@
                                             </div>
                                         </div>
                                         <div class="group_type group_type3">
-                                            <div>
+                                            <div id="sect2_hash5">
                                                 <h4 class="cont_title">
                                                     냉장고
                                                 </h4>
@@ -515,7 +515,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div id="sect2_hash6">
                                                 <h4 class="cont_title">
                                                     디스펜서
                                                 </h4>
@@ -543,6 +543,63 @@
                                         </div>
                                     </div>
                                 </div>
+                                <script>
+                                    if(location.hash == '#sect2_hash1'){
+                                        $('.tab_list li').removeClass('active');
+                                        $('.tab_list li').eq(2).addClass('active');
+                                        $('.tab_content_wrap .content').removeClass('active');
+                                        $('.tab_content_wrap .content3').addClass('active');
+
+                                        let hash1_scrollTop = $('#sect2_hash1').offset().top;
+                                        $('html').animate({scrollTop : hash1_scrollTop - 150}, 300);
+                                        //window.location.href.split('#')[0]
+                                    }else if(location.hash == '#sect2_hash2'){
+                                        $('.tab_list li').removeClass('active');
+                                        $('.tab_list li').eq(2).addClass('active');
+                                        $('.tab_content_wrap .content').removeClass('active');
+                                        $('.tab_content_wrap .content3').addClass('active');
+
+                                        let hash2_scrollTop = $('#sect2_hash2').offset().top;
+                                        $('html').animate({scrollTop : hash2_scrollTop - 150}, 300);
+
+                                    }else if(location.hash == '#sect2_hash3'){
+                                        $('.tab_list li').removeClass('active');
+                                        $('.tab_list li').eq(2).addClass('active');
+                                        $('.tab_content_wrap .content').removeClass('active');
+                                        $('.tab_content_wrap .content3').addClass('active');
+
+                                        let hash3_scrollTop = $('#sect2_hash3').offset().top;
+                                        $('html').animate({scrollTop : hash3_scrollTop - 150}, 300);
+
+                                    }else if(location.hash == '#sect2_hash4'){
+                                        $('.tab_list li').removeClass('active');
+                                        $('.tab_list li').eq(2).addClass('active');
+                                        $('.tab_content_wrap .content').removeClass('active');
+                                        $('.tab_content_wrap .content3').addClass('active');
+
+                                        let hash4_scrollTop = $('#sect2_hash4').offset().top;
+                                        $('html').animate({scrollTop : hash4_scrollTop - 150}, 300);
+
+                                    }else if(location.hash == '#sect2_hash5'){
+                                        $('.tab_list li').removeClass('active');
+                                        $('.tab_list li').eq(2).addClass('active');
+                                        $('.tab_content_wrap .content').removeClass('active');
+                                        $('.tab_content_wrap .content3').addClass('active');
+
+                                        let hash5_scrollTop = $('#sect2_hash5').offset().top;
+                                        $('html').animate({scrollTop : hash5_scrollTop - 150}, 300);
+
+                                    }else if(location.hash == '#sect2_hash6'){
+                                        $('.tab_list li').removeClass('active');
+                                        $('.tab_list li').eq(2).addClass('active');
+                                        $('.tab_content_wrap .content').removeClass('active');
+                                        $('.tab_content_wrap .content3').addClass('active');
+
+                                        let hash6_scrollTop = $('#sect2_hash6').offset().top;
+                                        $('html').animate({scrollTop : hash6_scrollTop - 150}, 300);
+                                    }
+
+                                </script>
                             </div>
                         </div>
                     </div>
