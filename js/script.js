@@ -17,17 +17,19 @@ $(document).ready(function() {
         $(this).closest('.select_wrap').toggleClass('active');
     });
     
-    $('.radio_list_wrap .radio_list').click(function(){
-        let soldOut_check = $(this).hasClass('sold_out');
-        let checkde_radio2 = $(this).find('input:radio').is(':checked');
+    $('.radio_list_wrap .radio_list .img_box').click(function(){
+        let soldOut_check = $(this).closest('.radio_list').hasClass('sold_out');
+        let checkde_radio2 = $(this).closest('.radio_list').find('input:radio').is(':checked');
         if(soldOut_check !== true){
             if(checkde_radio2 !== true){
                 $(this).closest('.radio_list_wrap').find('.radio_list').removeClass('checked');
-                $(this).addClass('checked');
+                $(this).closest('.radio_list').addClass('checked');
+
                 $(this).closest('.radio_list_wrap').find('.radio_box_wrap').removeClass('checked');
-                $(this).find('.radio_box_wrap').addClass('checked');
+                $(this).closest('.radio_list').find('.radio_box_wrap').addClass('checked');
+
                 $(this).closest('.radio_list_wrap').find('input:radio').attr('checked', false);
-                $(this).find('input:radio').attr('checked', true)
+                $(this).closest('.radio_list').find('input:radio').attr('checked', true)
             }else{
                 $(this).closest('.radio_list_wrap').find('.radio_list').removeClass('checked');
                 $(this).closest('.radio_list_wrap').find('.radio_box_wrap').removeClass('checked');
