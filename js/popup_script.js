@@ -1,9 +1,4 @@
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('---vh', `${vh}px`);
-window.addEventListener('resize', ()=>{
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('---vh', `${vh}px`);
-})
+
 
 // ------ 서비스 문의, 메인 창
 $('#inquiry_case_btn1').on('click', function () {

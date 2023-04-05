@@ -1654,7 +1654,7 @@
     #service_inquiry1{
         width: 100%;
         .popup_content_area{
-            padding: 40px 5.556%;
+            //padding: 40px 5.556%;
             .service_inquiry_content{
                 margin-bottom: 40px;
                 .popup_content_desc ul.inquiry_btn_wrap li{
@@ -2083,7 +2083,7 @@
 
 @media screen and (min-width: 769px){
     .inquiry_popup .popup_content_area {
-        
+        padding-bottom: 80px;
         .popup_content_desc{
             ol.inquiry_case_list li:hover{
                 background: #4267EB;
@@ -2100,4 +2100,27 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 768px){
+    .inquiry_popup .popup_content_area {
+        padding-bottom: 80px;
+    }
+    #service_inquiry2_3_1,
+    #service_inquiry2_3_3{
+        .popup_content_area{
+            padding-bottom: 80px;
+        }
+    }
+    #service_inquiry4_2_1,
+    #service_inquiry4_2_2{
+        .popup_content_area{
+            padding-bottom: 80px;
+        }
+    }
+
+    .popup2 .popup_content_wrap {
+        padding-bottom: 80px;
+    }
+
 }
