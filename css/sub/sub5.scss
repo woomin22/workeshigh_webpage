@@ -47,7 +47,7 @@
                         }
                     }
     
-                    &:hover,
+                    
                     &.on{
                         background: #4267EB;
                         .txt_box>*{
@@ -136,12 +136,12 @@
                         }
                     }
 
-                    &:hover{
-                        background: #4267EB;
-                        span{
-                            color: #fff;
-                        }
-                    }
+                    // &:hover{
+                    //     background: #4267EB;
+                    //     span{
+                    //         color: #fff;
+                    //     }
+                    // }
                     &.checked{
                         background: #4267EB;
                         span{
@@ -2075,6 +2075,27 @@
                             height: 7px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    .inquiry_popup .popup_content_area {
+        
+        .popup_content_desc{
+            ol.inquiry_case_list li:hover{
+                background: #4267EB;
+                .txt_box>*{
+                    color: #fff;
+                }
+            }
+
+            ul.inquiry_btn_wrap li:hover{
+                background: #4267EB;
+                span{
+                    color: #fff;
                 }
             }
         }

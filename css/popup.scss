@@ -363,7 +363,7 @@
 }
 
 @media screen and (max-width: 1024px){
-
+    
 
     .popup{
         top: 0;
@@ -619,5 +619,12 @@
                 line-height: 20px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .popup_content_area{
+        height: calc(var(--var, 1vh) * 100 - 56px);
+        max-height: calc(var(--var, 1vh) * 100 - 56px);
     }
 }

@@ -890,12 +890,6 @@ input[type='text']:focus{
         display: block !important;
     }
 
-    @supports (-webkit-touch-callout: none) { 
-        body{
-            height: -webkit-fill-available;
-        }
-    }
-
     header{
         height: 56px;
         padding: 0 4.444%;
