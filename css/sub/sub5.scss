@@ -1714,7 +1714,7 @@
         .service_inquiry_content2{
             .inquiry_question{
                 margin-top: 20px;
-                >div{
+                >div:not(.input_range_area){
                     p{
                         font-size: 13px;
                         line-height: 19px;

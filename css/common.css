@@ -262,7 +262,6 @@ main {
   gap: 28px;
 }
 .section_inner ul.tab_list li {
-  position: relative;
   color: #C1C1C1;
   font-size: 24px;
   font-weight: 500;
@@ -270,27 +269,13 @@ main {
   cursor: pointer;
   transition: 0.3s;
 }
-.section_inner ul.tab_list li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 0;
-  height: 1px;
-  background: #111;
-  transition: 0.3s;
-}
 .section_inner ul.tab_list li:hover {
   color: #4267EB;
   font-weight: 700;
 }
 .section_inner ul.tab_list li.active {
-  color: #111;
+  color: #4267EB;
   font-weight: 700;
-}
-.section_inner ul.tab_list li.active::after {
-  width: 100%;
 }
 
 .aside_cont {
