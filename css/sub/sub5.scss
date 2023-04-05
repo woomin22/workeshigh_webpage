@@ -1654,7 +1654,7 @@
     #service_inquiry1{
         width: 100%;
         .popup_content_area{
-            //padding: 40px 5.556%;
+            padding: 40px 5.556%;
             .service_inquiry_content{
                 margin-bottom: 40px;
                 .popup_content_desc ul.inquiry_btn_wrap li{
@@ -2105,6 +2105,11 @@
 @media screen and (max-width: 768px){
     .inquiry_popup .popup_content_area {
         padding-bottom: 100px;
+    }
+    #service_inquiry1{
+        .popup_content_area{
+            padding-bottom: 100px;
+        }
     }
     #service_inquiry2_3_1,
     #service_inquiry2_3_3{
