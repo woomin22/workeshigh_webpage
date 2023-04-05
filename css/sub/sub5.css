@@ -1921,11 +1921,12 @@
   .inquiry_popup .popup_content_area {
     padding-bottom: 100px;
   }
-  #service_inquiry1 .popup_content_area {
+  #service_inquiry1 .popup_content_area,
+  #service_inquiry3 .popup_content_area {
     padding-bottom: 100px;
   }
   #service_inquiry2_3_1 .popup_content_area,
-  #service_inquiry2_3_3 .popup_content_area {
+  #service_inquiry2_3_2 .popup_content_area {
     padding-bottom: 100px;
   }
   #service_inquiry4_2_1 .popup_content_area,
